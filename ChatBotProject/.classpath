@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-net-3.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-text-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/dec-0.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.70.0.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-core-js-2.70.0.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-cssparser-1.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-xpath-2.70.0.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.5.14.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.4.16.jar"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.5.14.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-client-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/neko-htmlunit-2.70.0.jar"/>
+	<classpathentry kind="lib" path="lib/salvation2-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/spotbugs-annotations-4.7.3.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-api-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-client-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-common-9.4.50.v20221201.jar"/>
+	<classpathentry kind="lib" path="C:/Users/cfste/eclipse-workspace/ChatBotProject/lib/flatlaf-3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
