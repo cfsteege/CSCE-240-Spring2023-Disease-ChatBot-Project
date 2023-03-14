@@ -3,6 +3,8 @@ Chatbot with a simple GUI that can answer questions related to a list of support
 
 <img src="test/ChatSessionImage1.png" width="400">
 
+## Usage
+Clone the project using Eclipse. Run the project with "ChatBotGui.java" as the main class.
 ## Folders
 ### src
 ##### DiseaseWebScraper.java
@@ -24,4 +26,4 @@ Contains HTML files for CDC and WebMD pages for DiseaseWebScraper to use in the 
 ### lib
 Contains external libraries used in project.
 ### test 
-Contains an image of the GUI with an example chat session and an example text file printed from a session with most of the possible questions and generated responses.
+Contains an image of the GUI with an example chat session, an example text file "chat-session-example.txt" printed from a session with most of the possible questions and generated responses,  and the "chat-session" text file which is printed from the most recently run session.
