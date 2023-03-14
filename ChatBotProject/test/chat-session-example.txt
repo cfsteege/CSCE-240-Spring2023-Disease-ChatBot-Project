@@ -1,0 +1,219 @@
+You: hi
+Bot: Hi
+You: good morning
+Bot: Good morning!
+You: whats up
+Bot: Nothing much!
+You: how are you
+Bot: Pretty alright.
+You: what is your name
+Bot: I'm Bot.
+You: what time is it
+Bot: 8:58 AM
+You: what day is it
+Bot: Today is Thursday, March 2, 2023
+You: thanks
+Bot: My pleasure!
+You: tell me a joke
+Bot: What's a computer's favorite animal? The RAM
+You: you're funny
+Bot: Thank you!
+You: youre welcome
+Bot: You're so polite! How can I help you?
+You: who was the 25th president of the US?
+Bot: I'm not sure how to answer that... Try asking me questions about one of the following diseases: Hiv, Scabies, Rabies, Rubella, Avian Flu, Malaria, Measles, Polio, Mumps
+You: what is measles
+Bot: Measles is an infection you get from a virus. The measles virus lives in the mucus of the nose and throat. It’s spread through the air and by coming into direct contact with someone who has it. The virus can stay active on surfaces and in the air for up to 2 hours.
+It’s very contagious. If you haven’t been vaccinated and are in a room with someone who has measles, you have a 90% chance of getting it.
+Part of what makes measles so dangerous is that you can be contagious 4 days before you get the telltale rash. So you could easily spread the virus without knowing you have it. You’ll continue to be contagious 4 days after the rash goes away.
+You: what are the symptoms
+Bot: Measles usually happens in stages over a period of about 2-3 weeks. For the first 10-14 days after you come into contact with the virus, you won’t have any signs. This is the incubation period.
+A high fever is normally the first sign of infection after the incubation period is over. The fever will last 4 to 7 days. During that time, you might have the following symptoms:
+   - Runny nose
+   - Red eyes
+   - Sore throat
+   - Tiny white bumps in your mouth (doctors call these Koplik spots) 
+After these symptoms, a red bumpy rash shows up. It usually starts at the hairline and spreads to the neck, torso, limbs, feet, and hands. As it spreads, your fever may spike as high as 105 F or higher. Finally, the rash starts to fade from the top of your body downward, starting with your face.
+You’re contagious to other people for 8 days: the 4 days before and after your rash shows up.
+You: tell me everything
+Bot: Measles is an infection you get from a virus. The measles virus lives in the mucus of the nose and throat. It’s spread through the air and by coming into direct contact with someone who has it. The virus can stay active on surfaces and in the air for up to 2 hours.
+It’s very contagious. If you haven’t been vaccinated and are in a room with someone who has measles, you have a 90% chance of getting it.
+Part of what makes measles so dangerous is that you can be contagious 4 days before you get the telltale rash. So you could easily spread the virus without knowing you have it. You’ll continue to be contagious 4 days after the rash goes away.Measles spreads quickly and easily. You can get it from being close to someone who has it. It travels through coughs and sneezes. You’ll also get it if you come in contact with any other nose or mouth fluids from someone who has it.
+The virus can stay on surfaces for up to 2 hours. You can pick it up by touching the surface and then rubbing your nose or eyes or touching your mouth.
+Your risk of getting measles goes up if you:
+   - Aren’t vaccinated, especially if you’re young or pregnant
+   - Have traveled outside the country
+   - Live in an area where many people are unvaccinated
+   - Are low in vitamin A
+   - Have an immunodeficiency due to another condition or medical treatmentMeasles usually happens in stages over a period of about 2-3 weeks. For the first 10-14 days after you come into contact with the virus, you won’t have any signs. This is the incubation period.
+A high fever is normally the first sign of infection after the incubation period is over. The fever will last 4 to 7 days. During that time, you might have the following symptoms:
+   - Runny nose
+   - Red eyes
+   - Sore throat
+   - Tiny white bumps in your mouth (doctors call these Koplik spots) 
+After these symptoms, a red bumpy rash shows up. It usually starts at the hairline and spreads to the neck, torso, limbs, feet, and hands. As it spreads, your fever may spike as high as 105 F or higher. Finally, the rash starts to fade from the top of your body downward, starting with your face.
+You’re contagious to other people for 8 days: the 4 days before and after your rash shows up.If you do get the measles virus, medicine won’t cure it (most drugs don’t kill viruses). The best way to speed up your recovery and prevent complications is to drink plenty of fluids and get lots of rest.
+There’s no specific treatment for measles, but there are things you can do if you think you’ve come into contact with it.
+   - Post-exposure vaccination. If you’ve never had a measles vaccination, you can get one up to 72 hours after being around the virus. The vaccine can lower your chances of getting it and can make your symptoms milder if you do.
+   - Immune serum globulin. This protein injection can boost your immune system if you’re pregnant, very young, or have a condition that makes it weak. You have to get it within 6 days of exposure to the virus. The injection may either prevent measles or keep your measles symptoms from being severe. 
+If your measles causes a bacterial infection, such as an ear infection or pneumonia, your doctor may prescribe an antibiotic to help treat it.
+At home, you can help ease your measles symptoms with:
+   - Fever-reducing NSAIDs such as acetaminophen, ibuprofen, or naproxen. Don’t give children aspirin
+   - Vitamin A. Kids with low levels of vitamin A are at higher risk of measles. Boosting it can make measles symptoms less severe.
+   - Rest
+   - Plenty of fluids to hydrate yourself after fever and sweats
+   - A humidifier for easier breathing
+   - Dim lights or sunglasses to relieve eye pain caused by bright lightsIn the U.S., about 1 in 4 people who get measles end up in the hospital. Children under age 5 and adults over age 20 tend to have the worst problems. These may include:
+   - Ear infections. This is a very common complication caused by bacteria. Sometimes these ear infections cause permanent hearing loss.
+   - Bronchitis, laryngitis, or croup. Often, the measles virus causes inflammation in your voice box or bronchial tubes, the air passageways to your lungs.
+   - Diarrhea. Less than 1 out of every 10 people with measles gets diarrhea.
+   - Pneumonia. You can get a severe infection of your lungs.
+   - Encephalitis, a brain infection that can cause deafness and brain damage. About 1 in 1,000 people with measles gets it. You might get it right away or months after your infection.
+   - Pregnancy problems such as low birth weight, premature birth, or even death of the mother
+Subacute sclerosing panencephalitis (SSPE) is a very rare complication some people get 7-10 years after having measles. SSPE affects your central nervous system and is fatal.If you get measles, you’ll be sick for a couple of weeks. Fortunately, it’s preventable.
+Immunizations are by far the best way to prevent the spread of measles. Thanks to the measles-mumps-rubella (MMR) vaccine, the virus has been mostly wiped out in the United States. That doesn't mean no one gets measles anymore; it’s just not constantly around. If you live in the U.S. and do get it, it's usually because someone brought it in from another country.
+The MMR vaccine is 97% effective after two doses. Doctors recommend that children get the first dose when they're between 12 and 15 months old, and the second between 4 and 6 years old.
+The vaccine is safe for most people.  But pregnant women, people with weakened immune systems (from diseases like leukemia and tuberculosis), and those with certain allergies can’t get the vaccine. As a result, the odds are higher that they’ll get the virus if they are exposed to it.
+Side effects from the MMR shot aren’t common, but you may have:
+   - A sore, red, or swollen spot where you got the shot
+   - Fever
+   - Mild rash
+   - Temporary pain or stiffness in your joints
+Very rarely, the MMR shot can cause a high fever or seizures. 
+The MMR vaccine doesn't cause autism. Researchers have done many studies on the MMR shot and autism. None of them show any link between the two.  
+Some people should not get the MMR vaccine. You may need to skip it if you have:
+   - Allergies to any of the ingredients
+   - A condition that weakens your immune system
+   - A family history of immune system problems
+   - A condition that makes you bruise or bleed easily
+   - Tuberculosis
+   - Had another vaccine in the past 4 weeks
+   - Any kind of illness that’s making you feel run down
+You may need to delay your MMR vaccine if you’re pregnant, think you might be pregnant, or have recently had a blood transfusion.
+If you can’t get a MMR shot, it’s important to take safety measures to ward off infection. Make sure you:
+   - Wash your hands well and often with soap.
+   - Bandage any cuts or broken skin.
+   - Keep your hands away from your face.
+   - Don’t share utensils, napkins, or tissues with other people.To figure out whether you have measles, your doctor will first look closely at your rash. They’ll also look for the small white Koplik spots inside your mouth. Sometimes, to confirm it, they can also do a blood test.
+You: what are the symptoms of malaria
+Bot: Symptoms for malaria usually start about 10-15 days after the infected mosquito bite. Along with high fever, shaking chills, and sweating, they can include:
+Throwing up or feeling like you're going to
+   - Headache
+   - Diarrhea
+   - Being very tired (fatigue)
+   - Body aches
+   - Yellow skin (jaundice) 
+   - Kidney failure
+   - Seizure
+   - Confusion
+   - Bloody stools
+   - Convulsions
+Here are some things to keep in mind:
+   - Because the signs are so similar to cold or flu symptoms, it might be hard to tell what you have at first.
+   - Malaria symptoms don’t always show up within 2 weeks, especially if it’s a P. vivax infection.
+   - People who live in areas with lots of malaria cases may become partially immune after being exposed to it throughout their lives. But this can change if they move to a place where they’re not around the parasite.
+You: how can I prevent malaria
+Bot: Travelers can protect themselves from malaria by taking prescription medicine and preventing mosquito bites. There is no malaria vaccine.
+Take Malaria Medicine
+Check your destination to see if you should take prescription malaria medication. Depending on the medicine you take, you will need to start taking this medicine multiple days before your trip, as well as during and after your trip. Talk to your doctor about which medicine you should take.
+Travelers should also take steps to prevent mosquito bites.
+Use an EPA-registered insect repellent
+   - Use Environmental Protection Agency (EPA)-registered insect repellents with one of the active ingredients below. When used as directed, EPA-registered insect repellents are proven safe and effective, even for pregnant and breastfeeding women. If also using sunscreen, always apply insect repellent after sunscreen.
+      - DEET
+      - Picaridin (known as KBR 3023 and icaridin outside the US)
+      - IR3535
+      - Oil of lemon eucalyptus (OLE)
+      - Para-menthane-diol (PMD)
+      - 2-undecanone
+Find the right insect repellent for you by using EPA's search tool.
+   - Insect Repellent Tips for Babies and Children
+      - Dress your child in clothing that covers arms and legs.
+      - Cover strollers and baby carriers with mosquito netting.
+      - When using insect repellent on your child:
+         - Always follow label instructions.
+         - Do not use products containing oil of lemon eucalyptus (OLE) or para-menthane-diol (PMD) on children under 3 years old.
+         - Do not apply insect repellent to a child’s hands, eyes, mouth, cuts, or irritated skin.
+            - Adults: Spray insect repellent onto your hands and then apply to a child’s face.
+         - If also using sunscreen, always apply insect repellent after sunscreen.
+Wear long-sleeved shirts and long pants
+Treat clothing and gear with permethrin
+   - Use 0.5% permethrin to treat clothing and gear (such as boots, pants, socks, and tents) or buy permethrin-treated clothing and gear.
+      - Permethrin is an insecticide that kills or repels insects like mosquitoes and sand flies.
+      - Permethrin-treated clothing provides protection after multiple washings.
+      - Read product information to find out how long the protection will last.
+   - If treating items yourself, follow the product instructions.
+   - Do not use permethrin products directly on skin.
+   - Watch the CDC video How to Use Permethrin.
+Keep mosquitoes out of your hotel room or lodging
+   - Choose a hotel or lodging with air conditioning or window and door screens.
+   - Use a mosquito net if you are unable to stay in a place with air conditioning or window and door screens or if you are sleeping outside.
+Sleep under a mosquito net
+   - Sleep under a mosquito net if you are outside or when screened rooms are not available. Mosquitoes can live indoors and bite during the day and night.
+   - Buy a mosquito net at your local outdoor store or online before traveling overseas.
+   - Choose a mosquito net that is compact, white, rectangular, with 156 holes per square inch, and long enough to tuck under the mattress.
+   - Permethrin-treated mosquito nets provide more protection than untreated nets.
+      - Permethrin is an insecticide that kills mosquitoes and other insects.
+      - To determine if you can wash a treated mosquito net, follow the label instructions.
+If you are bitten by mosquitoes, avoid scratching the bites and apply over-the-counter anti-itch or antihistamine cream to relieve itching. See Mosquito Bite Symptoms and Treatment.
+ 
+You: is there a vaccine
+Bot: In October 2021, the World Health Organization recommended RTS,S/AS01 (RTS,S), the world’s first malaria vaccine. This vaccine works against the P. falciparum malaria parasite. It can lower the rate of severe and life-threatening malaria for children in areas with moderate to high rates of the disease. If used widely, RTS,S has the potential to save tens of thousands of lives every year.
+Children as young as 5 months old who are at risk for malaria will get the vaccine in four separate doses.
+Experts have found that the vaccine could have major public health benefits. Models show that use of RTS,S can prevent one death for every 200 fully vaccinated children.
+But the shot still isn’t as successful at disease control as most childhood vaccinations. Because of this, countries at high risk can’t rely just on the vaccine to stop the threat of malaria. But when it’s used with other prevention methods, like insecticide-treated bed nets, pesticides, and other remedies, the vaccine can greatly reduce illness and death from the disease.
+Experts continue to plan long-term and sustainable methods to keep up supply of the RTS,S vaccine. This includes ways to make the vaccination more cost-effective, practical, and helpful for those most at risk.
+You: what are the complications of mumps
+Bot: It doesn’t happen often, but mumps can lead to some serious problems. That’s more likely if you get it as an adult than a child. Some possible complications are:
+   - Inflammation of the ovaries, breast tissue, and testicles in males who’ve already gone through puberty
+   - Inflammation in the brain, called encephalitis
+   - Inflammation in the membrane that covers the brain and spinal cord, called meningitis
+   - Hearing loss
+   - Heart problems
+   - Miscarriage if infected during pregnancy
+   - Pancreatitis
+You: what is the outlook for mumps
+Bot: Mumps is an infection caused by a virus that’s easily spread through saliva and mucus. It usually happens in kids who haven’t been immunized.
+Mumps can affect any part of the body, but it mostly affects saliva-making glands below and in front of the ears (called parotid glands). Those glands can swell if infected. In fact, puffy cheeks and a swollen jaw are the telltale signs of the virus.
+Mumps used to be common. But since the introduction of the measles, mumps, and rubella (MMR) vaccine in 1967, it’s been almost fully wiped out.
+You: how does HIV spread
+Bot: Sorry, I wasn't able to find any information to answer your question. I found the following information about Hiv: what it is, symptoms, risk factors and causes, prevention
+You: how does rubella spread
+Bot: Rubella spreads when someone who is infected coughs or sneezes tiny germ-filled droplets into the air and onto surfaces. People who catch the virus are contagious for up to a week before and a week after the rash appears.
+Some people don't know they're infected because they don't have symptoms, but they can still pass the virus to others. If you’ve been diagnosed with rubella, tell the people who’ve been around you, especially any pregnant women.
+You: how is polio treated
+Bot: If you have polio, your doctor will focus on making sure that you're comfortable and try to prevent any other health issues. Some treatments and tools for support include:
+   - Pain relievers (like ibuprofen)
+   - A ventilator (a device that helps you breathe)
+   - Physical therapy that can help keep your muscles working
+   - Bed rest and fluids for flu-like symptoms
+   - Antispasmodic medications to relax muscles
+   - Antibiotics for urinary tract infections
+   - A heating pad for muscle aches and spasms
+   - Corrective braces
+   - Pulmonary rehabilitation to help with lung complications
+   - A mobility aid such as a cane, wheelchair, or electric scooter
+You: how can I prevent HIV
+Bot: - Talk with your health care provider about PrEP or pre-exposure prophylaxis. It is usually a pill or a shot. PrEP is most effective when it is prescribed by your healthcare provider
+   - Before having sex for the first time with a new partner, you and your partner should talk about your sexual and drug-use history, disclose your HIV status, and get tested for HIV and other sexually transmitted infections.
+   - If you have sex, use condoms the right way every time you have vaginal, oral, or anal sex, from start to finish.
+   - Do not inject drugs or share needles or other devices that can break the skin. If you do inject drugs, use only new, sterile syringes and needles.
+   - If you get tattoos, piercings, or acupuncture abroad, make sure a new, sterile needle is used each time.
+   - If you get medical or dental care abroad, make sure the equipment is unused or properly sterilized.
+If you have HIV and are traveling, your destination may increase your risk of getting opportunistic infections or more severe illnesses from infections like travelers’ diarrhea. Bring enough of your medications to last your entire trip since not all countries have all HIV medication.
+Consult your doctor or travel medicine specialist at least 4 weeks before leaving as you may not be eligible for certain travel vaccines required at your destination, or you may need to take additional precautions.
+Check the Department of State website for any restrictions on travel for people with HIV at your destination
+You: what are the causes of the Avian Flu
+Bot: Sorry, I wasn't able to find any information to answer your question. I found the following information about Avian Flu: what it is, symptoms, prevention
+You: what are the causes of mumps
+Bot: A virus called a paramyxovirus causes mumps. It’s very easy to catch it from someone else if you come in contact with their saliva or mucus. Infected people can spread it by:
+   - Coughing, sneezing, or talking
+   - Sharing cups and utensils with others
+   - Not properly washing their hands and touching items that other people then touch
+   - Close contact from certain sports or kissing
+You: when was rabies discovered?
+Bot: Sorry, I wasn't able to find any information to answer your question. I found the following information about Rabies: what it is, symptoms, risk factors and causes, prevention
+You: what are the symptoms
+Bot: Rabies affects the central nervous system (the brain and spinal cord). Without appropriate medical care, rabies causes brain disease and death. Once symptoms of rabies appear, the disease is nearly always fatal. For this reason, preventing animal bites and receiving prompt medical care is especially important.
+Early rabies symptoms include weakness or discomfort, fever, and headache. There may be discomfort or a prickling or itching sensation at the place of the bite. Within days, an infected person may become anxious, confused, and agitated. As a person gets sicker, they may become delirious, hallucinate, be unable to sleep, and unable to swallow or quench their thirst.
+You: goodbye
+Bot: Goodbye!
