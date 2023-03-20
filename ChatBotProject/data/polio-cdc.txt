@@ -4,12 +4,15 @@ Polio is a life-threatening disease caused by a virus that affects the nervous s
    - Put a contaminated object such as a toy in your mouth.
    - Touch a contaminated object and put your fingers in your mouth.
    - Have close contact with a person sick with polio, for example when caring for them.
+(Source: https://wwwnc.cdc.gov/travel/diseases/poliomyelitis)
 
 <SECT>Symptoms
 Most people with polio do not feel sick. Some people have only minor symptoms, such as fever, tiredness, nausea, headache, nasal congestion, sore throat, cough, stiffness in the neck and back, and pain in the stomach, arms, and legs. Most people recover completely. In rare cases, polio infection can affect the brain and spinal cord and cause permanent loss of muscle function (paralysis) in the arms or legs (usually the legs). Death can occur if there is a loss of function of the muscles used for breathing or an infection of the brain.
+(Source: https://wwwnc.cdc.gov/travel/diseases/poliomyelitis)
 
 <SECT>Who is at risk?
 Polio is still a concern in some places. If you are not up to date with your polio vaccines, you are at risk of getting polio. If you are up to date on your polio vaccines but traveling to a polio-affected country, you may need a one-time polio adult booster. Check your destination’s travel health page and talk to your healthcare professional to learn what vaccines you may need before your trip.
+(Source: https://wwwnc.cdc.gov/travel/diseases/poliomyelitis)
 
 <SECT>What can travelers do to prevent polio?
 Get the polio vaccine:
@@ -27,4 +30,5 @@ Wash your hands often
    - Wash your hands often with soap and water, especially after using the bathroom or changing a child’s diaper and before eating or preparing food. Alcohol-based hand sanitizers do not kill poliovirus.
    - Don’t touch your eyes, nose, or mouth. If you need to touch your face, make sure your hands are clean.
    - Cover your mouth and nose with a tissue or your sleeve (not your hands) when coughing or sneezing.
+(Source: https://wwwnc.cdc.gov/travel/diseases/poliomyelitis)
 

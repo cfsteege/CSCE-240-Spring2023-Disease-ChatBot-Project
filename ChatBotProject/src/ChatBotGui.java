@@ -16,6 +16,9 @@ import com.formdev.flatlaf.FlatLightLaf;
  * @author Christine Steege
  *
  */
+
+//TODO: Where is the information coming from, separate sections for tell me everything, handle "quit"/"exit" queries
+
 public class ChatBotGui extends JFrame {
 	/** Chat bot that is used to generate responses to user input */
 	private ChatBot chatBot;

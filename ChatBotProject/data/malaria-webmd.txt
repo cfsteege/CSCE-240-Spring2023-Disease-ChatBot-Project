@@ -2,6 +2,7 @@
 Malaria is a serious and sometimes life-threatening tropical disease that is caused by a parasite and spreads through mosquitoes. It kills more than 445,000 people a year, many of them children in Africa.
 Although malaria is almost wiped out in the United States, you can still get the disease when you travel to other parts of the world. The United States has about 1,700 malaria cases every year from immigrants and travelers returning from countries where malaria is more common.
 These countries have climates that are hot enough for the malaria parasites and the mosquitoes that carry them to thrive. Before you travel, check the CDC’s website to see whether your destination is a hotspot for malaria. You may have to take pills before, during, and after your trip to lower your chances of getting it.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Malaria Causes and Risk Factors
 Malaria is caused by plasmodium parasites, which are carried by anophelesmosquitoes.
@@ -18,11 +19,13 @@ Malaria is most common in warm-weather climates. It’s found most often in:
    - The Middle East
    - Central and South America 
    - Oceania
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Types of Malaria
 There are five species of plasmodiumparasites that affect humans. Two of them are considered the most dangerous:
 P. falciparum.This is the most common malaria parasite in Africa, and it causes the most malaria-related deaths in the world. P. falciparum multiplies very quickly, causing serious blood loss and clogged blood vessels.
 P. vivax. This is the malaria parasite most commonly found outside of sub-Saharan Africa, especially in Asia and Latin America. This species can lie dormant, then rise up to infect your blood months or years after the mosquito bite.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Symptoms
 Symptoms for malaria usually start about 10-15 days after the infected mosquito bite. Along with high fever, shaking chills, and sweating, they can include:
@@ -41,10 +44,12 @@ Here are some things to keep in mind:
    - Because the signs are so similar to cold or flu symptoms, it might be hard to tell what you have at first.
    - Malaria symptoms don’t always show up within 2 weeks, especially if it’s a P. vivax infection.
    - People who live in areas with lots of malaria cases may become partially immune after being exposed to it throughout their lives. But this can change if they move to a place where they’re not around the parasite.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>When to Call a Doctor About Malaria
 Given how quickly malaria can become life-threatening, it’s important to get medical care as quickly as possible. Young children, infants, and pregnant women have an especially high chance for severe cases of malaria.
 Seek care if you get a high fever while living in or traveling to an area that has a high chance for malaria. You should still get medical help even if you see the symptoms many weeks, months, or a year after your travel.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Malaria Diagnosis
 Your doctor will ask you about your medical history and any recent travel and do a physical exam.
@@ -61,6 +66,7 @@ Molecular test. Also known as polymerase chain reaction test, it can identify th
 Antibody test. Doctors use this to find out if you've had malaria before. It looks for antibodies that show up in the blood after an infection.
 Drug resistance test. Some malaria parasites are resistant to drugs. But doctors can test your blood to see if certain drugs will work.
 Other blood tests. You may also have blood taken for a blood count and chemistry panel. This can tell your doctor how serious your infection is and if it's causing other problems, like anemia or kidney failure.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Malaria Treatment
 The treatment your doctor recommends will depend on things like:
@@ -76,6 +82,7 @@ Medications doctors use to treat malaria include:
    - Mefloquine. This medication is another option if chloroquine can’t be used, but it’s been linked to rare but serious side effects related to your brain and is only used as a last resort.
    - Artesunate. If your symptoms are severe, your doctor may recommend this drug as treatment for the first 24 hours, then follow it with 3 days of artemisinin-based combination therapy. 
 Some parasites that cause malaria have become resistant to almost all the medicines used to treat the illness, so researchers are always looking for new drugs that work.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Malaria Complications
 Some people are more likely to have serious health problems if they get malaria, including:
@@ -90,6 +97,7 @@ These health problems can include:
    - Liver, kidney, and spleen failure
    - Anemia (when you lose too many red blood cells)
    - Very low blood sugar
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 
 <SECT>Malaria Vaccine
 In October 2021, the World Health Organization recommended RTS,S/AS01 (RTS,S), the world’s first malaria vaccine. This vaccine works against the P. falciparum malaria parasite. It can lower the rate of severe and life-threatening malaria for children in areas with moderate to high rates of the disease. If used widely, RTS,S has the potential to save tens of thousands of lives every year.
@@ -97,4 +105,5 @@ Children as young as 5 months old who are at risk for malaria will get the vacci
 Experts have found that the vaccine could have major public health benefits. Models show that use of RTS,S can prevent one death for every 200 fully vaccinated children.
 But the shot still isn’t as successful at disease control as most childhood vaccinations. Because of this, countries at high risk can’t rely just on the vaccine to stop the threat of malaria. But when it’s used with other prevention methods, like insecticide-treated bed nets, pesticides, and other remedies, the vaccine can greatly reduce illness and death from the disease.
 Experts continue to plan long-term and sustainable methods to keep up supply of the RTS,S vaccine. This includes ways to make the vaccination more cost-effective, practical, and helpful for those most at risk.
+(Source: https://www.webmd.com/a-to-z-guides/malaria-symptoms)
 

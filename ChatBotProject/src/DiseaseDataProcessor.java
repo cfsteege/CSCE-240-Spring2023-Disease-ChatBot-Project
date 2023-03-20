@@ -18,7 +18,7 @@ public class DiseaseDataProcessor {
 	public static final Pattern WHAT_IS = Pattern.compile("(.*)(what is)|(what(s|'s))|(tell me about)(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern RISKS_CAUSES = Pattern.compile("(.*)(\\b)(risk)(.*)|(.*)(\\b)(cause)(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern SYMPTOMS = Pattern.compile("(.*)(symptom)(.*)|(.*)(\\b)(sign(s?))(\\b)(.*)", Pattern.CASE_INSENSITIVE);
-	public static final Pattern TREATMENT = Pattern.compile("(.*)(treat(ment)?)(.*)|(.*)(remed(y|(ies)))(.*)", Pattern.CASE_INSENSITIVE);
+	public static final Pattern TREATMENT = Pattern.compile("(.*)(treat(ment|ed)?)(.*)|(.*)(remed(y|(ies)))(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern OUTLOOK = Pattern.compile("(.*)(outlook)(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern COMPLICATIONS = Pattern.compile("(.*)(complication)(.*)", Pattern.CASE_INSENSITIVE);
 	public static final Pattern PREVENTION = Pattern.compile("(.*)(prevent)(.*)", Pattern.CASE_INSENSITIVE);

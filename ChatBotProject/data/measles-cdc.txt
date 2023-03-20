@@ -1,12 +1,15 @@
 <SECT>What is measles?
 Measles is a disease caused by a highly contagious virus. People with measles spread the virus through the air when they cough, sneeze, or breathe.  
+(Source: https://wwwnc.cdc.gov/travel/diseases/measles)
 
 <SECT>Symptoms
 Symptoms of measles include high fever, cough, runny nose, red and watery eyes, and rash. Koplik spots (tiny white spots inside the mouth) can appear 2 to 3 days after symptoms begin. Some people who become sick with measles also get a serious lung infection, such as pneumonia. Although severe cases are rare, measles can cause swelling of the brain and even death. Measles can be especially severe in infants and in people who are malnourished or who have weakened immune systems.
+(Source: https://wwwnc.cdc.gov/travel/diseases/measles)
 
 <SECT>Who is at risk?
 Anyone who has not been fully vaccinated or had measles before can get measles. Measles remains a common disease in many parts of the world, including Europe, the Middle East, Asia, the Pacific, and Africa. 
 In the United States, most measles cases occur among unvaccinated travelers who get infected while traveling internationally and spread measles to people who are not fully vaccinated in the United States. 
+(Source: https://wwwnc.cdc.gov/travel/diseases/measles)
 
 <SECT>What can travelers do to prevent measles?
 Getting vaccinated is the best way to protect yourself and others against measles. Measles vaccine is a routine vaccination given to children in the United States. Measles vaccine is usually given in two doses. It’s recommended that children get the first dose when they are 12 to 15 months old and the second dose when they are 4 to 6 years old. Measles vaccine is a combination vaccine that also protects against mumps and rubella (MMR vaccine) or mumps, rubella, and varicella (MMRV vaccine).
@@ -14,4 +17,5 @@ If you were born in or after 1957 and have never had measles or have never been 
 Infants 6 to 11 months old traveling internationally should get one dose of MMR vaccine before travel. This dose does not count as part of the routine childhood vaccination series.
 CAUTION: Pregnant people should NOT get the MMR vaccine. Any unvaccinated person should get the MMR vaccine immediately after their pregnancy.
 Avoid getting pregnant for at least 4 weeks after receiving the MMR vaccine.
+(Source: https://wwwnc.cdc.gov/travel/diseases/measles)
 

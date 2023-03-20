@@ -3,6 +3,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 import org.apache.commons.text.WordUtils;
+import org.apache.commons.text.similarity.LevenshteinDistance;
 
 public class DiseaseChatBot implements ChatBot {
 	// Web scraper to get disease info from CDC and WebMD pages
@@ -16,6 +17,8 @@ public class DiseaseChatBot implements ChatBot {
 	// String of supported diseases as a formatted list response
 	private String diseasesResponse;
 	
+	// LevenshteinDistance used to check user queries against the actual prompts
+	public static LevenshteinDistance lDist = new LevenshteinDistance();
 	// Random to use for randomly generating responses
 	private Random random = new Random();
 	// Local time and date for answer related questions
@@ -53,29 +56,21 @@ public class DiseaseChatBot implements ChatBot {
 		userEntry = userEntry.toLowerCase();
 		// If the user previously asked to get all info, we need to find out what disease they want to print all info for
 		if (getAllInfo) {
-			// Check if they mentioned a disease in their question
-			for (String disease : supportedDiseases) {
-				if (userEntry.contains(disease)) {
-					currentDisease = disease;
-					getAllInfo = false;
-					return processor.handleUserInput(currentDisease, DiseaseDataProcessor.ALL_INFO_REQUEST);
-				}
-			}
 			getAllInfo = false;
-			return "I don't have any information about that disease... Try asking me questions about one of the following diseases: "+diseasesResponse;
+			// Check if they mentioned a disease in their question
+			if (checkForDiseaseName(userEntry)) 
+				return processor.handleUserInput(currentDisease, DiseaseDataProcessor.ALL_INFO_REQUEST);
+			else
+				return "I don't have any information about that disease... Try asking me questions about one of the following diseases: "+diseasesResponse;
 		}
 		getAllInfo = false;
-		// Check if they mentioned a disease name in their question
-		for (String disease : supportedDiseases) {
-			if (userEntry.contains(disease)) {
-				currentDisease = disease;
-			}
-		}
 		// Check if they asked a small talk question 
 		String smallTalk = getSmallTalkResponse(userEntry);
 		if (smallTalk != null) {
 			return smallTalk;
 		}
+		// Check if they mentioned a disease name in their question
+		checkForDiseaseName(userEntry);
 		// Check if they want all info
 		if (userEntry.contains("tell me everything")) {
 			if (currentDisease != null) {
@@ -90,6 +85,51 @@ public class DiseaseChatBot implements ChatBot {
 			return "I'm not sure how to answer that... Try asking me questions about one of the following diseases: "+diseasesResponse;
 		} 
 		return processor.handleUserInput(currentDisease, userEntry);
+	}
+	
+	private boolean checkForDiseaseName(String userEntry) {
+		// Split the entry up into words
+		String[] words = userEntry.split("[^a-z]+");
+		// Values to keep track of the closest match so far
+		String bestDisease = "";
+		int bestDistance = Integer.MAX_VALUE;
+		// Loop through all the words checking for a disease name
+		for (String word : words) {
+			// Check the word against all diseases
+			for (String disease : supportedDiseases) {
+				// For the shorter disease names (like "HIV"), too many common words could be one letter off, 
+				// so if the disease name is less than 4 letter, just check against the disease name directly 
+				// to avoid false matches
+				if (disease.length() < 5) {
+					if (word.equals(disease)) {
+						// Update the closest match values
+						bestDistance = 0;
+						currentDisease = bestDisease;
+						break;
+					}
+				} else {
+					// Calculate the distance
+					int distance = lDist.apply(disease, word);
+					// Check if the distance is within tolerance and is the shortest distance found
+					if (distance <= 2 && distance < bestDistance) {
+						// Update the closest match values
+						bestDisease = disease;
+						bestDistance = distance;
+					}
+				}
+			}
+			// We've already found a perfect match so break
+			if (bestDistance == 0)
+				break;
+		}
+		
+		if (bestDistance != Integer.MAX_VALUE) {
+			// A match within tolerance was found
+			currentDisease = bestDisease;
+			return true;
+		}
+		// No disease match within tolerance found
+		return false;
 	}
 	
 	/**

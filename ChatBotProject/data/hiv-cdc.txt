@@ -1,14 +1,17 @@
 <SECT>What is HIV?
 HIV (human immunodeficiency virus) is a virus that attacks the body’s immune system. It is spread through certain body fluids, including blood, sexual fluids (like semen and vaginal or rectal fluids) and breast milk. Most people get HIV from having unprotected sex (including vaginal or anal sex) with someone who has HIV, or from sharing needles or other drug injection equipment with someone who has HIV.
+(Source: https://wwwnc.cdc.gov/travel/diseases/hiv)
 
 <SECT>Symptoms
 Early symptoms of HIV infection may include cough, body aches, headaches, nasal congestion, and sore throat. These symptoms usually go away on their own and can be mistaken for flu-like illness. Some people may have no early symptoms at all and may feel healthy. The only way to know for sure whether you have HIV is to get tested.
 Over time, HIV infection damages the immune system, making it harder for the body to fight off infections and other diseases, including heart disease, kidney disease, liver disease, and cancer. Left untreated, HIV infection can lead to AIDS (acquired immune deficiency syndrome). AIDS is the most severe phase of HIV infection. People with AIDS have such badly damaged immune systems that they get severe infections that don’t normally infect healthy people, called opportunistic infections, and eventually the infection leads to death. No effective cure exists, but with early diagnosis and proper medical care, HIV can be managed and controlled.
+(Source: https://wwwnc.cdc.gov/travel/diseases/hiv)
 
 <SECT>Who is at risk?
 Travelers are generally at low risk for getting HIV unless they engage in activities that could put them at risk, such as having unprotected sex or sharing needles.
 A person can get HIV by being stuck with a contaminated needle or another sharp object, though this is more of a risk for healthcare workers. Some low-income countries may not adequately screen their blood supplies or properly sterilize medical equipment used in medical clinics, dental clinics, and hospitals. There is a small chance that travelers to these countries who receive medical care could get infected.
 HIV infection affects people globally. Sub-Saharan Africa remains the most affected part of the world. Still, other regions significantly affected by HIV include Asia and the Pacific, Latin America, the Caribbean, Eastern Europe, and Central Asia.
+(Source: https://wwwnc.cdc.gov/travel/diseases/hiv)
 
 <SECT>What can travelers do to prevent HIV?
    - Talk with your health care provider about PrEP or pre-exposure prophylaxis. It is usually a pill or a shot. PrEP is most effective when it is prescribed by your healthcare provider
@@ -20,4 +23,5 @@ HIV infection affects people globally. Sub-Saharan Africa remains the most affec
 If you have HIV and are traveling, your destination may increase your risk of getting opportunistic infections or more severe illnesses from infections like travelers’ diarrhea. Bring enough of your medications to last your entire trip since not all countries have all HIV medication.
 Consult your doctor or travel medicine specialist at least 4 weeks before leaving as you may not be eligible for certain travel vaccines required at your destination, or you may need to take additional precautions.
 Check the Department of State website for any restrictions on travel for people with HIV at your destination
+(Source: https://wwwnc.cdc.gov/travel/diseases/hiv)
 
