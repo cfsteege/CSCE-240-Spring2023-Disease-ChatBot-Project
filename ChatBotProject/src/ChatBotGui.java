@@ -2,9 +2,7 @@
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.text.*;

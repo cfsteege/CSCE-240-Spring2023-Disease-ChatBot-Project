@@ -82,13 +82,5 @@ public class SpellingCorrector implements SpellCheckListener {
 		// Every time a spell check event occurs, we will update our list of misspelled words
 		misspelledWords.add(event.getInvalidWord());
 	}
-	
-	/**
-	 * Main method for testing
-	 */
-	public static void main(String[] args) throws FileNotFoundException, IOException {
-		SpellingCorrector sp = new SpellingCorrector(new File("dictionary/keywords.txt"));
-		System.out.println(sp.getCorrectedText("what can i ask"));
-	}
 
 }

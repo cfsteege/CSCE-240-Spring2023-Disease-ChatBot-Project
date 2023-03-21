@@ -77,9 +77,10 @@ public class DiseaseChatBot implements ChatBot {
 		}
 		getAllInfo = false;
 		// Check if they mentioned a disease name in their question
-		checkForDiseaseName(userEntry);
+		boolean mentionedDiseaseName = checkForDiseaseName(userEntry);
 		// Check if they want all info
 		if (userEntry.contains("tell me everything")) {
+			System.out.println("made it here lol");
 			if (currentDisease != null) {
 				return processor.handleUserInput(currentDisease, DiseaseDataProcessor.ALL_INFO_REQUEST);
 			}
@@ -87,10 +88,12 @@ public class DiseaseChatBot implements ChatBot {
 			getAllInfo = true;
 			return "What disease do you want to learn everything about? I can tell you about the following diseases: "+diseasesResponse;
 		}
-		// Check if they asked a small talk question 
-		String smallTalk = getSmallTalkResponse(userEntry);
-		if (smallTalk != null) {
-			return smallTalk;
+		if (!mentionedDiseaseName) {
+			// Check if they asked a small talk question 
+			String smallTalk = getSmallTalkResponse(userEntry);
+			if (smallTalk != null) {
+				return smallTalk;
+			}
 		}
 		if (currentDisease == null) {
 			// They didn't mention a disease and there is no current disease. Try to prompt them for a question about the supported diseases
