@@ -18,7 +18,7 @@ Interface to represent a chatbot. The bot must provide a method to able to take 
 ##### ChatBotGui.java
 Takes an implementation of the ChatBot interface and creates a simple, customizable GUI for the user to enter input and see the ChatBot responses. (Project 3)
 ##### SpellingCorrector.java
-Provides a simple API for using Jazzy to correct text based on the provided dictionary file.
+Provides a simple API for using Jazzy to correct text based on the provided dictionary file. (Project 4)
 ### data
 Contains the text files generated for each disease from DiseaseWebScraper and read by DiseaseDataProcessor. 
 ### doc
