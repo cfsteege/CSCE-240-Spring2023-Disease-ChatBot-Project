@@ -84,7 +84,6 @@ public class DiseaseChatBot implements ChatBot {
 		boolean mentionedDiseaseName = checkForDiseaseName(userEntry);
 		// Check if they want all info
 		if (userEntry.contains("tell me everything")) {
-			System.out.println("made it here lol");
 			if (currentDisease != null) {
 				return processor.handleUserInput(currentDisease, DiseaseDataProcessor.ALL_INFO_REQUEST);
 			}
