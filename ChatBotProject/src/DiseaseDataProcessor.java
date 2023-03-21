@@ -219,7 +219,9 @@ public class DiseaseDataProcessor {
 			for (String section : foundInfoSections)
 				sb.append(section + ", ");
 			sb.replace(sb.length() - 2, sb.length(), "");
-			return "Sorry, I wasn't able to find any information to answer your question. I did find information about "+WordUtils.capitalize(disease)+", try asking me about one of the following: " + sb.toString()+". (Or try asking me about another disease!)";
+			
+			String diseaseName = disease.equals("hiv")? "HIV" : WordUtils.capitalize(disease);
+			return "Sorry, I wasn't able to find any information to answer your question. I did find information about "+diseaseName+", try asking me about one of the following: " + sb.toString()+". (Or try asking me about another disease!)";
 		}
 	}
 	

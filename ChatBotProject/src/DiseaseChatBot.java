@@ -55,8 +55,12 @@ public class DiseaseChatBot implements ChatBot {
         
         // Create a String response with a formatted list of all the supported diseases
         StringBuilder sb = new StringBuilder();
-		for (String disease : supportedDiseases)
-			sb.append(WordUtils.capitalize(disease) + ", ");
+		for (String disease : supportedDiseases) {
+			if (disease.equals("hiv"))
+				sb.append("HIV, ");
+			else
+				sb.append(WordUtils.capitalize(disease) + ", ");
+		}
 		sb.replace(sb.length() - 2, sb.length(), "");
 		diseasesResponse = sb.toString();
 	}
