@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -17,8 +20,8 @@ public class DiseaseChatBot implements ChatBot {
 	// String of supported diseases as a formatted list response
 	private String diseasesResponse;
 	
-	// LevenshteinDistance used to check user queries against the actual prompts
-	public static LevenshteinDistance lDist = new LevenshteinDistance();
+	// SpellingCorrector to try to correct user entry spelling errors
+	private SpellingCorrector spellingCorrector;
 	// Random to use for randomly generating responses
 	private Random random = new Random();
 	// Local time and date for answer related questions
@@ -37,6 +40,13 @@ public class DiseaseChatBot implements ChatBot {
 		// Create instance if the disease data processor
 		processor = new DiseaseDataProcessor();
 		
+		// Try to initialize the SpellingCorrector
+		try {
+			spellingCorrector = new SpellingCorrector(new File("dictionary/keywords.txt"));
+		} catch (IOException e) {
+			System.out.println("Spelling Corrector failed to load dictionary. Running Disease Chatbot without spell correction...");
+		}
+		
 		// Add the WebMD and CDC diseases to a HashSet to get a list of only the unique supported diseases
 		Set<String> set = new HashSet<String>();
         set.addAll(webScraper.getSupportedCDCDiseases());
@@ -54,21 +64,18 @@ public class DiseaseChatBot implements ChatBot {
 	@Override
 	public String getResponse(String userEntry) {
 		userEntry = userEntry.toLowerCase();
+		// If the spelling corrector was able to properly initialize, correct user spelling errors
+		if (spellingCorrector != null) 
+			userEntry = spellingCorrector.getCorrectedText(userEntry);
 		// If the user previously asked to get all info, we need to find out what disease they want to print all info for
 		if (getAllInfo) {
 			getAllInfo = false;
 			// Check if they mentioned a disease in their question
 			if (checkForDiseaseName(userEntry)) 
 				return processor.handleUserInput(currentDisease, DiseaseDataProcessor.ALL_INFO_REQUEST);
-			else
-				return "I don't have any information about that disease... Try asking me questions about one of the following diseases: "+diseasesResponse;
+			return "I don't have any information about that disease... Try asking me questions about one of the following diseases: "+diseasesResponse;
 		}
 		getAllInfo = false;
-		// Check if they asked a small talk question 
-		String smallTalk = getSmallTalkResponse(userEntry);
-		if (smallTalk != null) {
-			return smallTalk;
-		}
 		// Check if they mentioned a disease name in their question
 		checkForDiseaseName(userEntry);
 		// Check if they want all info
@@ -80,6 +87,11 @@ public class DiseaseChatBot implements ChatBot {
 			getAllInfo = true;
 			return "What disease do you want to learn everything about? I can tell you about the following diseases: "+diseasesResponse;
 		}
+		// Check if they asked a small talk question 
+		String smallTalk = getSmallTalkResponse(userEntry);
+		if (smallTalk != null) {
+			return smallTalk;
+		}
 		if (currentDisease == null) {
 			// They didn't mention a disease and there is no current disease. Try to prompt them for a question about the supported diseases
 			return "I'm not sure how to answer that... Try asking me questions about one of the following diseases: "+diseasesResponse;
@@ -88,47 +100,13 @@ public class DiseaseChatBot implements ChatBot {
 	}
 	
 	private boolean checkForDiseaseName(String userEntry) {
-		// Split the entry up into words
-		String[] words = userEntry.split("[^a-z]+");
-		// Values to keep track of the closest match so far
-		String bestDisease = "";
-		int bestDistance = Integer.MAX_VALUE;
-		// Loop through all the words checking for a disease name
-		for (String word : words) {
-			// Check the word against all diseases
-			for (String disease : supportedDiseases) {
-				// For the shorter disease names (like "HIV"), too many common words could be one letter off, 
-				// so if the disease name is less than 4 letter, just check against the disease name directly 
-				// to avoid false matches
-				if (disease.length() < 5) {
-					if (word.equals(disease)) {
-						// Update the closest match values
-						bestDistance = 0;
-						currentDisease = bestDisease;
-						break;
-					}
-				} else {
-					// Calculate the distance
-					int distance = lDist.apply(disease, word);
-					// Check if the distance is within tolerance and is the shortest distance found
-					if (distance <= 2 && distance < bestDistance) {
-						// Update the closest match values
-						bestDisease = disease;
-						bestDistance = distance;
-					}
-				}
+		// Check if they mentioned a disease name in their question
+		for (String disease : supportedDiseases) {
+			if (userEntry.contains(disease)) {
+				currentDisease = disease;
+				return true;
 			}
-			// We've already found a perfect match so break
-			if (bestDistance == 0)
-				break;
 		}
-		
-		if (bestDistance != Integer.MAX_VALUE) {
-			// A match within tolerance was found
-			currentDisease = bestDisease;
-			return true;
-		}
-		// No disease match within tolerance found
 		return false;
 	}
 	

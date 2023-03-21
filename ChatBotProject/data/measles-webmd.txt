@@ -4,6 +4,7 @@ It’s very contagious. If you haven’t been vaccinated and are in a room with some
 Part of what makes measles so dangerous is that you can be contagious 4 days before you get the telltale rash. So you could easily spread the virus without knowing you have it. You’ll continue to be contagious 4 days after the rash goes away.
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
 
+
 <SECT>Measles Symptoms
 Measles usually happens in stages over a period of about 2-3 weeks. For the first 10-14 days after you come into contact with the virus, you won’t have any signs. This is the incubation period.
 A high fever is normally the first sign of infection after the incubation period is over. The fever will last 4 to 7 days. During that time, you might have the following symptoms:
@@ -14,6 +15,7 @@ A high fever is normally the first sign of infection after the incubation period
 After these symptoms, a red bumpy rash shows up. It usually starts at the hairline and spreads to the neck, torso, limbs, feet, and hands. As it spreads, your fever may spike as high as 105 F or higher. Finally, the rash starts to fade from the top of your body downward, starting with your face.
 You’re contagious to other people for 8 days: the 4 days before and after your rash shows up.
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
+
 
 <SECT>Measles Causes and Risk Factors
 Measles spreads quickly and easily. You can get it from being close to someone who has it. It travels through coughs and sneezes. You’ll also get it if you come in contact with any other nose or mouth fluids from someone who has it.
@@ -26,9 +28,11 @@ Your risk of getting measles goes up if you:
    - Have an immunodeficiency due to another condition or medical treatment
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
 
+
 <SECT>Measles Diagnosis
 To figure out whether you have measles, your doctor will first look closely at your rash. They’ll also look for the small white Koplik spots inside your mouth. Sometimes, to confirm it, they can also do a blood test.
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
+
 
 <SECT>Measles Treatment and Home Remedies
 If you do get the measles virus, medicine won’t cure it (most drugs don’t kill viruses). The best way to speed up your recovery and prevent complications is to drink plenty of fluids and get lots of rest.
@@ -45,6 +49,7 @@ At home, you can help ease your measles symptoms with:
    - Dim lights or sunglasses to relieve eye pain caused by bright lights
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
 
+
 <SECT>Measles Complications
 In the U.S., about 1 in 4 people who get measles end up in the hospital. Children under age 5 and adults over age 20 tend to have the worst problems. These may include:
    - Ear infections. This is a very common complication caused by bacteria. Sometimes these ear infections cause permanent hearing loss.
@@ -55,6 +60,7 @@ In the U.S., about 1 in 4 people who get measles end up in the hospital. Childre
    - Pregnancy problems such as low birth weight, premature birth, or even death of the mother
 Subacute sclerosing panencephalitis (SSPE) is a very rare complication some people get 7-10 years after having measles. SSPE affects your central nervous system and is fatal.
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
+
 
 <SECT>Measles Prevention
 If you get measles, you’ll be sick for a couple of weeks. Fortunately, it’s preventable.
@@ -83,4 +89,5 @@ If you can’t get a MMR shot, it’s important to take safety measures to ward off 
    - Keep your hands away from your face.
    - Don’t share utensils, napkins, or tissues with other people.
 (Source: https://www.webmd.com/children/vaccines/what-is-measles)
+
 

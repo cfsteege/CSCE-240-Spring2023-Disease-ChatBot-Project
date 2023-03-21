@@ -127,7 +127,8 @@ public class DiseaseDataProcessor {
 	        			if (!foundInfoSections.contains(prompt)) {
 	        				foundInfoSections.add(prompt);
 	        			}
-	        		
+	        			// Append the section header
+	        			sectionInfoSB.append(line.replace(SECTION_DELIMETER, "")+"\n");
 	        			// Loop through all the lines following the header to store the section information
 	        			while (scanner.hasNextLine()) {
 	        				line = scanner.nextLine();
@@ -174,17 +175,17 @@ public class DiseaseDataProcessor {
 				if (CDCInfo != null && WebMDInfo != null) {
 					// Both pages have the info, find the section with the most information and print it
 					if (WebMDInfo.length() > CDCInfo.length()) {
-						answerSB.append(WebMDInfo);
+						answerSB.append(WebMDInfo+"\n\n");
 					} else {
-						answerSB.append(CDCInfo);
+						answerSB.append(CDCInfo+"\n\n");
 					}
 				} else if (CDCInfo != null) {
-					answerSB.append(CDCInfo);
+					answerSB.append(CDCInfo+"\n\n");
 				} else if (WebMDInfo != null) {
-					answerSB.append(WebMDInfo);
+					answerSB.append(WebMDInfo+"\n\n");
 				}
 			}
-			return answerSB.toString();
+			return answerSB.toString().trim();
 		} else {
 	    	// Check all the regex patterns
 			for (Pattern pattern : regexPatterns) {
@@ -199,16 +200,16 @@ public class DiseaseDataProcessor {
 					String CDCInfo = CDCSectionInfo.get(pattern);
 					String WebMDInfo = WebMDSectionInfo.get(pattern);
 					if (CDCInfo != null && WebMDInfo != null) {
-						// Both pages have the info, find the section with the most information and print it
+						// Both pages have the info, find the section with the most information and print it after removing the header
 						if (WebMDInfo.length() > CDCInfo.length()) {
-							return WebMDInfo;
+							return WebMDInfo.substring(WebMDInfo.indexOf('\n')+1);
 						} else {
-							return CDCInfo;
+							return CDCInfo.substring(CDCInfo.indexOf('\n')+1);
 						}
 					} else if (CDCInfo != null) {
-						return CDCInfo;
+						return CDCInfo.substring(CDCInfo.indexOf('\n')+1);
 					} else if (WebMDInfo != null) {
-						return WebMDInfo;
+						return WebMDInfo.substring(WebMDInfo.indexOf('\n')+1);
 					}
 				}
 			}
@@ -218,7 +219,7 @@ public class DiseaseDataProcessor {
 			for (String section : foundInfoSections)
 				sb.append(section + ", ");
 			sb.replace(sb.length() - 2, sb.length(), "");
-			return "Sorry, I wasn't able to find any information to answer your question. I found the following information about "+WordUtils.capitalize(disease)+": " + sb.toString();
+			return "Sorry, I wasn't able to find any information to answer your question. I did find information about "+WordUtils.capitalize(disease)+", try asking me about one of the following: " + sb.toString()+". (Or try asking me about another disease!)";
 		}
 	}
 	

@@ -4,6 +4,7 @@ Polio is short for "poliomyelitis." It's a virus that spreads easily between peo
 People of any age can get polio, but kids under 5 have the highest risk of getting it.
 (Source: https://www.webmd.com/children/what-is-polio)
 
+
 <SECT>Polio Symptoms
 Most people who catch the poliovirus don't have symptoms. About 1 in 4 people will have symptoms that look a lot like the flu, such as:
    - Sore throat
@@ -32,6 +33,7 @@ Years after you have polio, you may start to have other symptoms. Known as "post
 Polio is different from acute flaccid myelitis (AFM), a rare but serious condition that also attacks the nervous system and causes your muscles to weaken. Some people call AFM a "polio-like" illness, but it is not the same virus.
 (Source: https://www.webmd.com/children/what-is-polio)
 
+
 <SECT>Polio Causes and Risk Factors
 You get polio from a virus. You have to come in direct contact with the virus to get it. This can be person-to-person contact, or through contact with an object that has the virus on it. When you have the virus, it lives in your throat and intestines.
 Transmission
@@ -41,6 +43,7 @@ The virus gets inside you through your mouth. You might get it by:
 Even if you don’t have symptoms, you can pass on polio to others if it’s in your body.
 Although polio mainly affects children under 5, you’re also at high risk if you haven’t had the polio vaccine.
 (Source: https://www.webmd.com/children/what-is-polio)
+
 
 <SECT>Polio Treatment
 If you have polio, your doctor will focus on making sure that you're comfortable and try to prevent any other health issues. Some treatments and tools for support include:
@@ -56,6 +59,7 @@ If you have polio, your doctor will focus on making sure that you're comfortable
    - A mobility aid such as a cane, wheelchair, or electric scooter
  
 (Source: https://www.webmd.com/children/what-is-polio)
+
 
 <SECT>Polio Prevention
 There's no cure for polio, but a vaccine allows your body to fight off the virus.
@@ -78,8 +82,10 @@ If you're an adult who got the polio vaccine as a child, you should still be imm
 Call your doctor right away if you have any of these signs.
 (Source: https://www.webmd.com/children/what-is-polio)
 
+
 <SECT>Polio Outlook
 Since 1988, the number of cases of polio in the world has gone down by 99%. In 2018, sources reported only 33 cases worldwide. But while many countries are polio-free, some still actively have it. And anyone who comes into contact with the virus who hasn’t been vaccinated can get it. In late July 2022, a case of paralytic poliomyelitis was confirmed in an unvaccinated adult in Rockland County, New York. The infection was not travel-related.
 The best way to get rid of polio for good across the world is to make sure people are immunized.
 (Source: https://www.webmd.com/children/what-is-polio)
+
 

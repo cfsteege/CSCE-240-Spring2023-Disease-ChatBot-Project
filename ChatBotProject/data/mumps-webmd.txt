@@ -4,6 +4,7 @@ Mumps can affect any part of the body, but it mostly affects saliva-making gland
 Mumps used to be common. But since the introduction of the measles, mumps, and rubella (MMR) vaccine in 1967, it’s been almost fully wiped out.
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
 
+
 <SECT>Mumps Signs and Symptoms
 Symptoms don’t begin until about 2 weeks after you’re infected. The classic signs are pain and swelling in your face and jaw. You may notice other symptoms a few days before that, including:
    - Fatigue
@@ -14,6 +15,7 @@ Symptoms don’t begin until about 2 weeks after you’re infected. The classic sign
    - Weakness
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
 
+
 <SECT>Causes of Mumps
 A virus called a paramyxovirus causes mumps. It’s very easy to catch it from someone else if you come in contact with their saliva or mucus. Infected people can spread it by:
    - Coughing, sneezing, or talking
@@ -21,6 +23,7 @@ A virus called a paramyxovirus causes mumps. It’s very easy to catch it from som
    - Not properly washing their hands and touching items that other people then touch
    - Close contact from certain sports or kissing
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
+
 
 <SECT>Mumps Treatment
 If you get mumps, there’s no treatment. That’s because antibiotics don’t work on a virus. You have to simply let it run its course. Talk to your doctor about what you can do to help manage you or your child’s symptoms. Their suggestions may include:
@@ -31,6 +34,7 @@ If you get mumps, there’s no treatment. That’s because antibiotics don’t work on
    - Take over-the-counter, non-aspirin pain relievers
 If you think you have mumps or have been around someone who has, see your doctor to get tested right away.
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
+
 
 <SECT>Mumps Complications
 It doesn’t happen often, but mumps can lead to some serious problems. That’s more likely if you get it as an adult than a child. Some possible complications are:
@@ -43,8 +47,10 @@ It doesn’t happen often, but mumps can lead to some serious problems. That’s mor
    - Pancreatitis
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
 
+
 <SECT>Mumps Prevention
 The Centers for Disease Control and Prevention (CDC)  recommends children get two doses of the vaccine. They should get the first at 12-15 months old and the second between 4 and 6 years. Teens and adults should make sure their MMR vaccinations are up to date.
 If you haven’t been vaccinated, you can get mumps. Some people have it without knowing it. Most recover completely in a few weeks.
 (Source: https://www.webmd.com/children/vaccines/what-are-the-mumps)
+
 

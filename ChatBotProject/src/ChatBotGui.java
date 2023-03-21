@@ -2,7 +2,9 @@
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.text.*;
@@ -17,7 +19,7 @@ import com.formdev.flatlaf.FlatLightLaf;
  *
  */
 
-//TODO: Where is the information coming from, separate sections for tell me everything, handle "quit"/"exit" queries
+//TODO: handle "quit"/"exit" queries?
 
 public class ChatBotGui extends JFrame {
 	/** Chat bot that is used to generate responses to user input */
@@ -219,7 +221,7 @@ public class ChatBotGui extends JFrame {
 	}
 	
 	/**
-	 * Method for testing.
+	 * Main method.
 	 * @param args
 	 */
 	public static void main(String[] args) {

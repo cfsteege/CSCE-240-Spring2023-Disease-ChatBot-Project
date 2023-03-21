@@ -32,5 +32,6 @@
 	<classpathentry kind="lib" path="lib/websocket-client-9.4.50.v20221201.jar"/>
 	<classpathentry kind="lib" path="lib/websocket-common-9.4.50.v20221201.jar"/>
 	<classpathentry kind="lib" path="lib/flatlaf-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/jazzy-core-0.5.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

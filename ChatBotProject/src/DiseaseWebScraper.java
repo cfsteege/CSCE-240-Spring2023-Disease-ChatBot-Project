@@ -205,14 +205,14 @@ public class DiseaseWebScraper {
 	    
 		// Create a list for the section String lists and add the first section
 		List<List<String>> sections = new ArrayList<>();
-		diseaseInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")");
+		diseaseInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")\n");
 	    sections.add(diseaseInfo);
 		// Create a String list for the Strings of each section
 		ArrayList<String> sectionInfo = new ArrayList<>();
 		// Parse and add the symptom section information
 		sectionInfo.add(delimeter+"Symptoms");
 		getInfoFromCDCSection(next, headingNodes.get(1), sectionInfo);
-		sectionInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")");
+		sectionInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")\n");
 		sections.add(sectionInfo);
 		
 		// Starting after the title section, loop through every other section except the last one, which will be the "After Travel" section
@@ -225,7 +225,7 @@ public class DiseaseWebScraper {
 		    // Extract the disease info for each section
 			getInfoFromCDCSection(headingNodes.get(i), headingNodes.get(i+1), sectionInfo);
 			// Add the section String list to the sections list
-			sectionInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")");
+			sectionInfo.add("(Source: "+diseaseToCDCLink.get(disease)+")\n");
 			sections.add(sectionInfo);
 		}
 	    
@@ -299,7 +299,7 @@ public class DiseaseWebScraper {
 		    // Extract the disease info for each section
 			getInfoFromWebMdSection(headings.get(i), sectionInfo);
 			// Add the section String list to the sections list
-			sectionInfo.add("(Source: "+diseaseToWebMdLink.get(disease)+")");
+			sectionInfo.add("(Source: "+diseaseToWebMdLink.get(disease)+")\n");
 			sections.add(sectionInfo);
 		}
 		

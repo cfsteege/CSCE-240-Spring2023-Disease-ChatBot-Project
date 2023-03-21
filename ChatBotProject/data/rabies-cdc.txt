@@ -3,10 +3,12 @@ Rabies is a deadly disease caused by a virus. You can get rabies if you are bitt
 In the United States, rabies is mostly found in wild animals like bats, raccoons, skunks, and foxes. However, in many other countries around the world, bites from dogs (including puppies) are the main source of rabies infections in people. Most people who die of rabies were bitten by a dog with rabies.
 (Source: https://wwwnc.cdc.gov/travel/diseases/rabies)
 
+
 <SECT>Symptoms
 Rabies affects the central nervous system (the brain and spinal cord). Without appropriate medical care, rabies causes brain disease and death. Once symptoms of rabies appear, the disease is nearly always fatal. For this reason, preventing animal bites and receiving prompt medical care is especially important.
 Early rabies symptoms include weakness or discomfort, fever, and headache. There may be discomfort or a prickling or itching sensation at the place of the bite. Within days, an infected person may become anxious, confused, and agitated. As a person gets sicker, they may become delirious, hallucinate, be unable to sleep, and unable to swallow or quench their thirst.
 (Source: https://wwwnc.cdc.gov/travel/diseases/rabies)
+
 
 <SECT>Who is at risk?
 Rabid dogs are a problem in many countries around the world, including most of Africa, Asia, and parts of Central and South America. Although any mammal can transmit rabies, dog bites are how most travelers get rabies.
@@ -17,6 +19,7 @@ Activities that may increase a traveler’s chances of rabies infection include:
 Children are more likely to get infected because they often play with animals and may not report bites.
 Rabies in dogs is rare in the United States, Australia, Canada, Japan, and most European countries.
 (Source: https://wwwnc.cdc.gov/travel/diseases/rabies)
+
 
 <SECT>What can travelers do to prevent rabies?
 Travelers can protect themselves from rabies by taking the following steps:
@@ -38,4 +41,5 @@ The rabies vaccine is given in two shots. The second dose is given seven days af
 Consider medical evacuation insurance
 Rabies vaccine is not available in all countries. Medical evacuation insurance can cover the cost of transferring you home or to the nearest destination where care can be obtained. For more information, see Travel Insurance: Peace of Mind While You Travel and Travel Insurance, Travel Health Insurance & Medical Evacuation Insurance.
 (Source: https://wwwnc.cdc.gov/travel/diseases/rabies)
+
 

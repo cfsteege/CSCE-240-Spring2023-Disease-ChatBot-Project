@@ -2,14 +2,17 @@
 Malaria is a disease caused by a parasite. Mosquitoes spread the parasite to people when they bite them.
 (Source: https://wwwnc.cdc.gov/travel/diseases/malaria)
 
+
 <SECT>Symptoms
 Malaria symptoms usually appear within in 7 to 30 days but can take up to one year to develop. Symptoms may include high fevers and shaking chills, flu-like illness. Without treatment, malaria can cause severe illness and death.
 (Source: https://wwwnc.cdc.gov/travel/diseases/malaria)
+
 
 <SECT>Who is at risk?
 The mosquitoes that spread malaria are found in Africa, Central and South America, parts of the Caribbean, Asia, Eastern Europe, and the South Pacific (See maps: Eastern Hemisphere and Western Hemisphere). Travelers going to these countries may get bit by mosquitoes and get infected.
 About 2,000 cases of malaria are diagnosed in the United States annually, mostly among returned travelers.
 (Source: https://wwwnc.cdc.gov/travel/diseases/malaria)
+
 
 <SECT>What can travelers do to prevent malaria?
 Travelers can protect themselves from malaria by taking prescription medicine and preventing mosquito bites. There is no malaria vaccine.
@@ -56,4 +59,5 @@ Sleep under a mosquito net
 If you are bitten by mosquitoes, avoid scratching the bites and apply over-the-counter anti-itch or antihistamine cream to relieve itching. See Mosquito Bite Symptoms and Treatment.
  
 (Source: https://wwwnc.cdc.gov/travel/diseases/malaria)
+
 
