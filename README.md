@@ -17,12 +17,16 @@ Uses DiseaseWebScraper and DiseaseDataProcessor to take user input regarding a d
 Interface to represent a chatbot. The bot must provide a method to able to take a String user entry and provide a String response. (Project 3)
 ##### ChatBotGui.java
 Takes an implementation of the ChatBot interface and creates a simple, customizable GUI for the user to enter input and see the ChatBot responses. (Project 3)
+##### SpellingCorrector.java
+Provides a simple API for using Jazzy to correct text based on the provided dictionary file.
 ### data
 Contains the text files generated for each disease from DiseaseWebScraper and read by DiseaseDataProcessor. 
 ### doc
 Contains the project report and a UML diagram of the system.
 ### html
 Contains HTML files for CDC and WebMD pages for DiseaseWebScraper to use in the case that it fails to load the webpages.
+### dictionary
+Contains a text file of keywords to use for spell correcting by SpellingCorrector
 ### lib
 Contains external libraries used in project.
 ### test 
