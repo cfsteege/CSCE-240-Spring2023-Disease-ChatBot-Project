@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -82,7 +83,8 @@ public class DiseaseDataProcessor {
 		// Handle CDC page for disease
 		try {
 			// Try to process and store the disease info from the corresponding file
-			CDCSectionInfo = getProcessedFileInfo("data/"+disease.toLowerCase().replace(" ", "-")+"-cdc.txt");
+			InputStream fileSteam = DiseaseDataProcessor.class.getResourceAsStream(disease.toLowerCase().replace(" ", "-")+"-cdc.txt");
+			CDCSectionInfo = getProcessedFileInfo(fileSteam);
 		} catch(Exception e) { 
 			System.out.println("No supported CDC page found for \""+disease+"\"");
 		}
@@ -90,7 +92,8 @@ public class DiseaseDataProcessor {
 		// Handle WebMD page for disease
 		try {
 			// Try to process and store the disease info from the corresponding file
-			WebMDSectionInfo = getProcessedFileInfo("data/"+disease.toLowerCase().replace(" ", "-")+"-webmd.txt");
+			InputStream fileSteam = DiseaseDataProcessor.class.getResourceAsStream(disease.toLowerCase().replace(" ", "-")+"-webmd.txt");
+			WebMDSectionInfo = getProcessedFileInfo(fileSteam);
 		} catch (Exception e) {
 			System.out.println("No supported WebMD page found for \""+disease+"\"");
 		}
@@ -101,12 +104,12 @@ public class DiseaseDataProcessor {
 	
 	/**
 	 * Processes disease info from the file with the provided name and returns a map matched regex patterns to the corresponding information sections
-	 * @param fileName name of file with disease info
+	 * @param file text file with disease info
 	 * @return HashMap of any matched regex pattern to the corresponding information section
 	 * @throws FileNotFoundException
 	 */
-	private HashMap<Pattern, String> getProcessedFileInfo(String fileName) throws FileNotFoundException {
-	    Scanner scanner = new Scanner(new File(fileName));
+	private HashMap<Pattern, String> getProcessedFileInfo(InputStream inputStream) throws FileNotFoundException {
+	    Scanner scanner = new Scanner(new InputStreamReader(inputStream, Charset.forName("windows-1252")));
 	    HashMap<Pattern, String> sectionInfo = new HashMap<>();
 	    
         String line = scanner.nextLine();
@@ -158,6 +161,7 @@ public class DiseaseDataProcessor {
 	        }
 	     }
 	    
+	    scanner.close();
 	    return sectionInfo;
 	}
 	

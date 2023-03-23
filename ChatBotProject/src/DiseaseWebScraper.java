@@ -528,7 +528,7 @@ public class DiseaseWebScraper {
 	private void printDiseaseInfoToTextfile(String outputFileName, List<List<String>> sectionInfoStrings) {
 		try {
 			// Open a new FileWriter with the file name
-			FileWriter writer = new FileWriter("data/" + outputFileName);
+			FileWriter writer = new FileWriter(new File(System.getProperty("user.dir"), outputFileName));
 			// Loop through each information section
 			for (List<String> sectionInfo : sectionInfoStrings) {
 				// Loop through each parsed String of the section (these strings represent the header or 

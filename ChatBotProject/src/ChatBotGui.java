@@ -1,10 +1,11 @@
-
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 import java.io.FileWriter;
 
 import javax.swing.*;
+import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.plaf.metal.MetalButtonUI;
 import javax.swing.text.*;
 
 import com.formdev.flatlaf.FlatLightLaf;
@@ -43,7 +44,7 @@ public class ChatBotGui extends JFrame {
 	 * @param chatBot ChatBot used to generate responses to user input
 	 */
 	public ChatBotGui(ChatBot chatBot) {
-		this(chatBot, Color.GRAY, Color.BLUE, "", (new JFrame()).getIconImage());
+		this(chatBot, Color.GRAY, Color.BLUE, "", (new JFrame()).getIconImage(), null);
 	}
 	
 	/**
@@ -54,7 +55,7 @@ public class ChatBotGui extends JFrame {
 	 * @param title GUI frame title 
 	 * @param frameIcon GUI frame icon
 	 */
-	public ChatBotGui(ChatBot chatBot, Color sendButtonColor, Color botTextColor, String title, Image frameIcon) {
+	public ChatBotGui(ChatBot chatBot, Color sendButtonColor, Color botTextColor, String title, Image frameIcon, Image sendIcon) {
 		// Set all the class attributes
 		this.chatBot = chatBot;
 		setSendButtonColor(sendButtonColor);
@@ -89,7 +90,8 @@ public class ChatBotGui extends JFrame {
 		// Set the size of the send button
 		sendButton.setPreferredSize(new Dimension(35, 20));
 		// Set the icon to a scaled down image of a white arrow
-		sendButton.setIcon(new ImageIcon(new ImageIcon("images/SendImage.png").getImage().getScaledInstance(15, 15,  java.awt.Image.SCALE_AREA_AVERAGING)));
+		sendButton.setIcon(new ImageIcon(sendIcon.getScaledInstance(15, 15,  java.awt.Image.SCALE_AREA_AVERAGING)));
+		//sendButton.setBorderPainted(false);
 		
 		// Panel to contain the text field and send button
 		JPanel textFieldPanel = new JPanel(new BorderLayout(5,0));
@@ -110,8 +112,20 @@ public class ChatBotGui extends JFrame {
 		this.setContentPane(mainPanel);
 		this.pack();
 		this.setResizable(false);
-		// Set the icon for the frame
+		
+		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+			JRootPane rootPane = SwingUtilities.getRootPane(sendButton);
+			rootPane.setDefaultButton(sendButton);
+		}
+		
+		// Set the icon for the frame for Windows OS (and other systems which do support this method)
 		this.setIconImage(frameIcon);
+        // Set icon for Mac OS (and other systems which do support this method)
+		try {
+	        Taskbar.getTaskbar().setIconImage(frameIcon);
+        } catch (Exception e) {
+            System.out.println("The os does not support: 'taskbar.setIconImage'");
+        }
 		
 		// Add a window listener to print to a text file upon closing if that option is selected 
 		this.addWindowListener(new WindowAdapter() {
@@ -222,9 +236,11 @@ public class ChatBotGui extends JFrame {
 	 * Main method.
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		ChatBotGui diseaseChatGui = new ChatBotGui(new DiseaseChatBot(), Color.decode("#02ACC9"), Color.decode("#00859B"), "Disease Chatbot", new ImageIcon("images/VirusIcon.png").getImage());
-		diseaseChatGui.printSessionToFile("test/chat-session");
+	public static void main(String[] args) {		
+		Image sendImage = new ImageIcon(ChatBotGui.class.getResource("/SendImage.png")).getImage(); 
+		Image frameImage = new ImageIcon(ChatBotGui.class.getResource("/VirusIcon.png")).getImage();
+		ChatBotGui diseaseChatGui = new ChatBotGui(new DiseaseChatBot(), Color.decode("#02ACC9"), Color.decode("#00859B"), "Disease Chatbot", frameImage, sendImage);
+		//diseaseChatGui.printSessionToFile("test/chat-session");
 		diseaseChatGui.setVisible(true);
 	}
 

@@ -1,12 +1,12 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.text.WordUtils;
-import org.apache.commons.text.similarity.LevenshteinDistance;
 
 public class DiseaseChatBot implements ChatBot {
 	// Web scraper to get disease info from CDC and WebMD pages
@@ -36,13 +36,13 @@ public class DiseaseChatBot implements ChatBot {
 	public DiseaseChatBot() {
 		// Create an instance of the DiseaseWebScrapper and parse all diseases
 		webScraper = new DiseaseWebScraper();
-		webScraper.parseAllDiseases();
 		// Create instance if the disease data processor
 		processor = new DiseaseDataProcessor();
 		
 		// Try to initialize the SpellingCorrector
 		try {
-			spellingCorrector = new SpellingCorrector(new File("dictionary/keywords.txt"));
+			InputStream fileSteam = DiseaseChatBot.class.getResourceAsStream("/keywords.txt");
+			spellingCorrector = new SpellingCorrector(fileSteam);
 		} catch (IOException e) {
 			System.out.println("Spelling Corrector failed to load dictionary. Running Disease Chatbot without spell correction...");
 		}

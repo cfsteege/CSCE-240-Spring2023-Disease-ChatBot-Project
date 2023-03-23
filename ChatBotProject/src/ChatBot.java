@@ -1,4 +1,3 @@
-
 /**
  * This represents a ChatBot interface. The bot must provide a method to able to take a String user entry and provide a String response.
  * @author Christine Steege

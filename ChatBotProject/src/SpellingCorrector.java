@@ -1,8 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.swabunga.spell.engine.SpellDictionaryHashMap;
 import com.swabunga.spell.engine.Word;
@@ -26,8 +30,6 @@ public class SpellingCorrector implements SpellCheckListener {
 	private SpellChecker spellChecker;
 	// Keep a list of the misspelled words
 	private List<String> misspelledWords;
-	// SpellDictionaryHashMap to store dictionary words
-	private SpellDictionaryHashMap dictionaryHashMap;
 
 	/**
 	 * Constructor
@@ -37,12 +39,37 @@ public class SpellingCorrector implements SpellCheckListener {
 	 */
 	public SpellingCorrector(File dictionary) throws FileNotFoundException, IOException {
 		misspelledWords = new ArrayList<String>();
-		// Create the SpellDictionaryHashMap from the provided dictionary file
-		dictionaryHashMap = new SpellDictionaryHashMap(dictionary);
-		spellChecker = new SpellChecker(dictionaryHashMap);
+		// Create the spell checker with the provided dictionary
+		spellChecker = new SpellChecker(new SpellDictionaryHashMap(dictionary));
 		// Add this class as a spell check listener to the spell checker
 		spellChecker.addSpellCheckListener(this);
 	}
+	
+	/**
+	 * Constructor
+	 * @param dictionary InputStream to use as the dictionary for the spell checker
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public SpellingCorrector(InputStream dictionary) throws FileNotFoundException, IOException {
+		misspelledWords = new ArrayList<String>();
+		// Create the spell checker
+		spellChecker = new SpellChecker();
+		// Create a scanner for the input stream
+		Scanner scanner = new Scanner(new InputStreamReader(dictionary, Charset.defaultCharset()));
+		while(scanner.hasNextLine()) {
+			// Add each word from the input stream to the dictionary
+			spellChecker.addToDictionary(scanner.nextLine());
+		}
+		scanner.close();
+		// Add this class as a spell check listener to the spell checker
+		spellChecker.addSpellCheckListener(this);
+		
+		
+	}
+	
+
+	
 
 	/**
 	 * Returns the corrected input text based on the dictionary words.
@@ -81,6 +108,11 @@ public class SpellingCorrector implements SpellCheckListener {
 	public void spellingError(SpellCheckEvent event) {
 		// Every time a spell check event occurs, we will update our list of misspelled words
 		misspelledWords.add(event.getInvalidWord());
+	}
+	
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		SpellingCorrector sp = new SpellingCorrector(new File("dictionary/keywords.txt"));
+		System.out.println(sp.getCorrectedText("hiv"));
 	}
 
 }
