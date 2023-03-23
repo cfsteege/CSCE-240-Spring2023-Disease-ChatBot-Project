@@ -4,7 +4,8 @@ Chatbot with a simple GUI that can answer questions related to a list of support
 <img src="./ChatBotProject/test/ChatSessionImage1.png" width="400">
 
 ## Usage
-Clone the project using Eclipse. Run the project with "ChatBotGui.java" as the main class.
+Download the DiseaseChatbot.jar file. Run this file by simply opening the .jar file.
+If the application doesn't open directly, the .jar file can also be run from the terminal. Navigate to the directory where the DiseaseChatbot.jar file is stored, and run 'java -jar DiseaseChatbot.jar'. This application requires at least Java 14.
 ## Folders
 ### src
 ##### DiseaseWebScraper.java
