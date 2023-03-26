@@ -1,5 +1,4 @@
 tell
-me
 everything
 about
 what
@@ -63,7 +62,6 @@ name
 who're
 time
 date
-day
 month
 year
 good

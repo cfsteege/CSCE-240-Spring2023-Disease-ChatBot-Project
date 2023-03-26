@@ -105,9 +105,4 @@ public class SpellingCorrector implements SpellCheckListener {
 		misspelledWords.add(event.getInvalidWord());
 	}
 	
-	public static void main(String[] args) throws FileNotFoundException, IOException {
-		SpellingCorrector sp = new SpellingCorrector(new File("dictionary/keywords.txt"));
-		System.out.println(sp.getCorrectedText("hiv"));
-	}
-
 }
