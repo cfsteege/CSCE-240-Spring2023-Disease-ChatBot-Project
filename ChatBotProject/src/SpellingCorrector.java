@@ -64,12 +64,7 @@ public class SpellingCorrector implements SpellCheckListener {
 		scanner.close();
 		// Add this class as a spell check listener to the spell checker
 		spellChecker.addSpellCheckListener(this);
-		
-		
 	}
-	
-
-	
 
 	/**
 	 * Returns the corrected input text based on the dictionary words.
