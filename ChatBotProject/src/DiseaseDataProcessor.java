@@ -245,4 +245,5 @@ public class DiseaseDataProcessor {
 			return "Unable to answer prompt.\n";
 		}
 	}
+	
 }

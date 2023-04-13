@@ -1,11 +1,8 @@
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
-import java.io.FileWriter;
 
 import javax.swing.*;
-import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.plaf.metal.MetalButtonUI;
 import javax.swing.text.*;
 
 import com.formdev.flatlaf.FlatLightLaf;
@@ -27,11 +24,17 @@ public class ChatBotGui extends JFrame {
 	private Color botTextColor;
 	/** Color of send button */
 	private Color sendButtonColor;
-	/** File path of text file to print session to */
-	private String outputFilePath;
-	/** Flag to tell whether to print the session to a file or not */
-	private boolean printSessionToFile = false;
-	
+	/** Text from chat session */
+	private String chatSessionText;
+	/** Time of the program start */
+	private long startTime;
+	/** Total time of program */
+	private long totalTime;
+	/** Total number of user utterances */
+	private int userUtterances;
+	/** Total number of system utterances */
+	private int systemUtterances;
+
 	/** Chat pane to display the bot and user chat */
 	private JTextPane chatPane = new JTextPane();
 	/** Button to send user entry */
@@ -112,6 +115,7 @@ public class ChatBotGui extends JFrame {
 		this.setContentPane(mainPanel);
 		this.pack();
 		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
 			JRootPane rootPane = SwingUtilities.getRootPane(sendButton);
@@ -124,17 +128,26 @@ public class ChatBotGui extends JFrame {
 		try {
 	        Taskbar.getTaskbar().setIconImage(frameIcon);
         } catch (Exception e) {
-            System.out.println("The os does not support: 'taskbar.setIconImage'");
+            System.out.println("The OS does not support: 'taskbar.setIconImage'");
         }
 		
-		// Add a window listener to print to a text file upon closing if that option is selected 
+		// Add a window listener to save the session text and calculate session time upon closing
 		this.addWindowListener(new WindowAdapter() {
 	        @Override
 	        public void windowClosing(WindowEvent e) {
-	        	if (printSessionToFile)
-	        		printChatSessionToFile();
+				chatSessionText = chatPane.getText();
+				totalTime = System.currentTimeMillis() - startTime;
 	        }
 	    });
+	}
+	
+	/**
+	 * Override the setVisible class to record the starting time when the window is made visible
+	 */
+	@Override
+	public void setVisible(boolean b) {
+		startTime = System.currentTimeMillis();
+		super.setVisible(b);
 	}
 	
 	/**
@@ -149,6 +162,7 @@ public class ChatBotGui extends JFrame {
 		if (!userEntry.isBlank()) {
 			// Append the user entry
 			appendToPane("You", userEntry, Color.BLACK);
+			userUtterances++;
 			// Clear the text field
 			textField.setText("");
 			
@@ -156,6 +170,7 @@ public class ChatBotGui extends JFrame {
 			String response = chatBot.getResponse(userEntry);
 			// Append the response to the chat pane
 			appendToPane("Bot", response, botTextColor);
+			systemUtterances++;
 		}
 	}
 	
@@ -185,7 +200,7 @@ public class ChatBotGui extends JFrame {
 	        doc.insertString(doc.getLength(), message+"\n", attributeSet);
 		} catch (BadLocationException e) {
 			System.out.println("Something went wrong within the document model for the chat text pane.");		
-		}  
+		}
 
     }
 	
@@ -207,41 +222,35 @@ public class ChatBotGui extends JFrame {
 	}
 	
 	/**
-	 * Sets the file path to print a session to. If this path is not set, the session will not be printed to an output file. 
-	 * This should be called before the ChatBotGui is set to visible.
-	 * @param filePath String file path of text file	 
+	 * Returns the chat session text
+	 * @return chat session text
 	 */
-	public void printSessionToFile(String filePath) {
-		this.printSessionToFile = true;
-		this.outputFilePath = filePath;
+	public String getChatSessionText() {
+		return chatSessionText;
 	}
 	
 	/**
-	 * Prints the chat session to the output text file.
+	 * Returns the total time of the chat session from the window opening to closing
+	 * @return total time of chat session
 	 */
-	private void printChatSessionToFile() {
-		try {
-			// Open a new FileWriter with the file name
-			FileWriter writer = new FileWriter(outputFilePath);
-			// Write the text from the chat pane to the file
-			writer.write(chatPane.getText());
-			writer.close();
-		} 
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+	public long getTotalChatSessionTime() {
+		return totalTime;
 	}
 	
 	/**
-	 * Main method.
-	 * @param args
+	 * Returns the total number of user utterances
+	 * @return total number of user utterances
 	 */
-	public static void main(String[] args) {		
-		Image sendImage = new ImageIcon(ChatBotGui.class.getResource("/SendImage.png")).getImage(); 
-		Image frameImage = new ImageIcon(ChatBotGui.class.getResource("/VirusIcon.png")).getImage();
-		ChatBotGui diseaseChatGui = new ChatBotGui(new DiseaseChatBot(), Color.decode("#02ACC9"), Color.decode("#00859B"), "Disease Chatbot", frameImage, sendImage);
-		//diseaseChatGui.printSessionToFile("test/chat-session");
-		diseaseChatGui.setVisible(true);
+	public int getTotalUserUtternaces() {
+		return userUtterances;
 	}
-
+	
+	/**
+	 * Returns the total number of system utterances
+	 * @return total number of system utterances
+	 */
+	public int getTotalSystemUtternaces() {
+		return systemUtterances;
+	}
+	
 }

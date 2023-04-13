@@ -74,7 +74,6 @@ public class SpellingCorrector implements SpellCheckListener {
 	public String getCorrectedText(String text) {
 		// Check the spelling for the words in the provided text (a SpellCheckEvent will occur if the word is found to be misspelled)
 		spellChecker.checkSpelling(new StringWordTokenizer(text, new TeXWordFinder()));		
-		
 		// Loop through all the misspelled words 
 		for (String misspelledWord : misspelledWords) {
 			// Don't try to correct single character words
@@ -105,4 +104,8 @@ public class SpellingCorrector implements SpellCheckListener {
 		misspelledWords.add(event.getInvalidWord());
 	}
 	
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		SpellingCorrector sc = new SpellingCorrector(SpellingCorrector.class.getResourceAsStream("/keywords.txt"));
+		System.out.println(sc.getCorrectedText("blah blah blah"));
+	}
 }

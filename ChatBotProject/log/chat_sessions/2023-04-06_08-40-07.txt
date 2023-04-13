@@ -1,0 +1,21 @@
+You: how are you
+Bot: Pretty alright.
+You: what time is it
+Bot: 8:39 AM
+You: what is measles
+Bot: Measles is an infection you get from a virus. The measles virus lives in the mucus of the nose and throat. It’s spread through the air and by coming into direct contact with someone who has it. The virus can stay active on surfaces and in the air for up to 2 hours.
+It’s very contagious. If you haven’t been vaccinated and are in a room with someone who has measles, you have a 90% chance of getting it.
+Part of what makes measles so dangerous is that you can be contagious 4 days before you get the telltale rash. So you could easily spread the virus without knowing you have it. You’ll continue to be contagious 4 days after the rash goes away.
+(Source: https://www.webmd.com/children/vaccines/what-is-measles)
+You: what are the symptyms
+Bot: Measles usually happens in stages over a period of about 2-3 weeks. For the first 10-14 days after you come into contact with the virus, you won’t have any signs. This is the incubation period.
+A high fever is normally the first sign of infection after the incubation period is over. The fever will last 4 to 7 days. During that time, you might have the following symptoms:
+   - Runny nose
+   - Red eyes
+   - Sore throat
+   - Tiny white bumps in your mouth (doctors call these Koplik spots) 
+After these symptoms, a red bumpy rash shows up. It usually starts at the hairline and spreads to the neck, torso, limbs, feet, and hands. As it spreads, your fever may spike as high as 105 F or higher. Finally, the rash starts to fade from the top of your body downward, starting with your face.
+You’re contagious to other people for 8 days: the 4 days before and after your rash shows up.
+(Source: https://www.webmd.com/children/vaccines/what-is-measles)
+You: thanks
+Bot: You're welcome!
