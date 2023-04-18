@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.*;
@@ -20,6 +21,8 @@ public class DiseaseChatBot implements ChatBot {
 	
 	// SpellingCorrector to try to correct user entry spelling errors
 	private SpellingCorrector spellingCorrector;
+	
+	private SessionLogger sessionLogger;
 	// Random to use for randomly generating responses
 	private Random random = new Random();
 	// Local time and date for answer related questions
@@ -36,6 +39,13 @@ public class DiseaseChatBot implements ChatBot {
 		webScraper = new DiseaseWebScraper();
 		// Create instance if the disease data processor
 		processor = new DiseaseDataProcessor();
+		
+		// Try to initialize the SessionLogger
+		try {
+			sessionLogger = new SessionLogger();
+		} catch (FileNotFoundException e1) {
+			System.out.println("Error loading session stats files.");
+		}
 		
 		// Try to initialize the SpellingCorrector
 		try {
@@ -90,6 +100,12 @@ public class DiseaseChatBot implements ChatBot {
 			return "What disease do you want to learn everything about? I can tell you about the following diseases: "+diseasesResponse;
 		}
 		if (!mentionedDiseaseName) {
+			// Check if they asked for past usage
+			String stats = getStatsResponse(userEntry);
+			if (stats != null) {
+				return stats;
+			}
+			
 			// Check if they asked a small talk question 
 			String smallTalk = getSmallTalkResponse(userEntry);
 			if (smallTalk != null) {
@@ -114,13 +130,20 @@ public class DiseaseChatBot implements ChatBot {
 		return false;
 	}
 	
+	private String getStatsResponse(String userInput) {
+		if (Pattern.compile("(.*)(\\b)(stat)|(history)(.*)").matcher(userInput).find() || (userInput.contains("usage") && userInput.contains("summary"))){
+			if (sessionLogger != null)
+				return sessionLogger.getSummary();
+		}
+		return null;
+	}
+	
 	/**
 	 * Generates a response to a set of known small talk prompts. Returns null if the user input doesn't match a known small talk prompt.
 	 * @param userInput String possible small talk prompt
 	 * @return String response to user input if it matches a small talk prompt, else return null
 	 */
 	public String getSmallTalkResponse(String userInput) {
-		userInput = userInput.toLowerCase();
 		// Check for some common small talk questions and provide a (possibly randomly generated) pre-coded response 
 		if (Pattern.compile("(.*)(\\b)(how(re|'re|\\sare))(.*)(\\b)(you)(\\b)(.*)").matcher(userInput).find() || Pattern.compile("(.*)(\\b)(how(s|'s|\\sis))(.*)(\\b)(going)(\\b)(.*)").matcher(userInput).find()) {
 			int num = random.nextInt(3);

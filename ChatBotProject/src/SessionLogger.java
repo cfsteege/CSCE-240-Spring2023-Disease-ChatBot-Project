@@ -23,9 +23,10 @@ public class SessionLogger {
 	}
 	
 	/**
-	 * Prints a summary of the chat session stats.
+	 * Returns a summary of the chat session stats.
+	 * @return Stting summary of stats
 	 */
-	public void printSummary() {
+	public String getSummary() {
 		int totalUserPrompts = 0;
 		int totalSystemResponses = 0;
 		int totalTime = 0;
@@ -37,59 +38,59 @@ public class SessionLogger {
 			totalTime += Integer.parseInt(line[3]);
 		}
 		// Print the results
-		System.out.println("There are "+lines.size()+" chats to date with user prompting "+totalUserPrompts+" times and the system responding "+totalSystemResponses+" times. Total duration is "+totalTime+" seconds.");
+		return "There are "+lines.size()+" chats to date with user prompting "+totalUserPrompts+" times and the system responding "+totalSystemResponses+" times. Total duration is "+totalTime+" seconds.";
 	}
 	
 	/**
-	 * Prints a summary of the stats for a provided chat number.
+	 * Returns a summary of the stats for a provided chat number.
 	 * @param chatNum chat number
+	 * @return String summary of the stats for a provided chat number
 	 */
-	public void printChatSummary(int chatNum) {
+	public String getChatSummary(int chatNum) {
 		// Check that the provided chat number is valid
 		int totalChatNum = lines.size();
 		if (chatNum > totalChatNum) {
-			System.out.println("ERROR: There are only "+totalChatNum+" chat sessions.");
-			return;
+			return "ERROR: There are only "+totalChatNum+" chat sessions.";
 		}
 		if (chatNum < 1) {
-			System.out.println("ERROR: Chat number must be positive");
-			return;
+			return "ERROR: Chat number must be positive";
 		} 
 		
 		// Get the line that corresponds to the provided chat number
 		String[] line = lines.get(chatNum-1);
 		// Print the stats for that line
-		System.out.println("Chat "+chatNum+" had user prompting "+line[1]+" times and system responding "+line[2]+" times. Total duration was "+line[3]+" seconds.");
+		return "Chat "+chatNum+" had user prompting "+line[1]+" times and system responding "+line[2]+" times. Total duration was "+line[3]+" seconds.";
 	}
 	
 	/**
-	 * Prints the session text for the provided chat number.
+	 * Returns the session text for the provided chat number.
 	 * @param chatNum chat number
+	 * @return String session text for provided chat number
 	 */
-	public void printChat(int chatNum) {
+	public String getChat(int chatNum) {
 		// Check that the provided chat number is valid
 		int totalChatNum = lines.size();
 		if (chatNum > totalChatNum) {
-			System.out.println("ERROR: There are only "+totalChatNum+" chat sessions.");
-			return;
+			return "ERROR: There are only "+totalChatNum+" chat sessions.";
 		}
 		if (chatNum < 1) {
-			System.out.println("ERROR: Chat number must be positive");
-			return;
+			return "ERROR: Chat number must be positive";
 		} 
 		
 		// Get the line that corresponds to the provided chat number 
 		String[] line = lines.get(chatNum-1);
 		Scanner scanner;
 		try {
+			StringBuilder sb = new StringBuilder();
 			// Read the corresponding session file for the session with the same date
 			scanner = new Scanner(new File("log/chat_sessions/"+line[4]+".txt"));
 			// Print each line from that text file
 	        while (scanner.hasNextLine()) 
-	        	System.out.println(scanner.nextLine());
+	        	sb.append(scanner.nextLine());
+	        return sb.toString();
 		} 
 		catch (FileNotFoundException e) {
-			System.out.println("ERROR: Could not find chat session file.");
+			return "ERROR: Could not find chat session file.";
 		}
 	}
 	
@@ -106,7 +107,7 @@ public class SessionLogger {
 				System.out.println("ERROR: No command line argumement provided.");
 			} 
 			else if (args[0].equals("-summary")) {
-				sessionLogger.printSummary();
+				System.out.println(sessionLogger.getSummary());
 			} 
 			else if (args[0].equals("-showchat-summary")) {
 				// Make sure a chat number was provided
@@ -114,7 +115,7 @@ public class SessionLogger {
 					// Make sure chat number is an integer
 					try {
 						int chatNum = Integer.parseInt(args[1]);
-						sessionLogger.printChatSummary(chatNum);
+						System.out.println(sessionLogger.getChatSummary(chatNum));
 					} 
 					catch (Exception e) {
 						System.out.println("ERROR: Chat number should be an integer.");
@@ -130,7 +131,7 @@ public class SessionLogger {
 					// Make sure chat number is an integer
 					try {
 						int chatNum = Integer.parseInt(args[1]);
-						sessionLogger.printChat(chatNum);
+						System.out.println(sessionLogger.getChat(chatNum));
 					} 
 					catch (Exception e) {
 						System.out.println("ERROR: Chat number should be an integer.");

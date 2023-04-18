@@ -127,7 +127,7 @@ public class DiseaseChatbotLauncher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new DiseaseChatbotLauncher(true);
+		new DiseaseChatbotLauncher(false);
 	}
 
 }

@@ -82,3 +82,9 @@ ask
 you
 disease
 what
+usage
+summary
+history
+statistic
+statistics
+stats

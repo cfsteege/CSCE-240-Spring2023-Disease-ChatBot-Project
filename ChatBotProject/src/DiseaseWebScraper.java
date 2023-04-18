@@ -145,40 +145,8 @@ public class DiseaseWebScraper {
 			}
 		}
 		catch (Exception e) {
-			System.out.println("Something went wrong trying to parse the CDC webpage for "+disease+". Attempting to load local copy...");
-			try {
-				File f = new File("html/"+disease.replaceAll(" ", "-")+"-cdc.html");
-				page = client.getPage("file:\\\\"+f.getAbsolutePath());
-				
-				// Get a list of the headings for each section
-				List<HtmlHeading3> headings = page.getByXPath("//h3");
-
-				// Loop through all of the web page headings
-				for (HtmlHeading3 heading : headings) {
-					// We want to keep track of the node that corresponds to the "What is <disease>?" section as we 
-					// will need to do a bit of special parsing for this section
-					if (heading.getId().contains("whatis")) 
-						descriptionSectionNode = heading.getParentNode();
-					// Add all other nodes to the heading node list until we've reached the "After Travel" section
-					else if (!heading.getId().equals("aftertravel"))
-						headingNodes.add(heading.getParentNode());
-					// We've reached the "After Travel" section, break;
-					else if (heading.getId().equals("aftertravel")) {
-						headingNodes.add(heading.getParentNode());
-						break;
-					}
-				}
-				
-				if (descriptionSectionNode == null) {
-					// Something went wrong parsing the headings. Maybe the web page formatting changed.
-					throw new Exception();
-				}
-			} 
-			catch (Exception ex) {
-				System.out.println("Unable to load local copy.");
-				ex.printStackTrace();
-				return false;
-			}
+			System.out.println("Something went wrong trying to parse the CDC webpage for "+disease+".");
+			return false;
 		} 
 		
 		// Creating a list to store the parsed disease info for the first section
@@ -273,19 +241,8 @@ public class DiseaseWebScraper {
 			}
 		} 
 		catch (Exception e) {
-			System.out.println("Something went wrong trying to parse the WebMD webpage for "+disease+". Attempting to load local copy...");
-			try {
-				File f = new File("html/"+disease.replaceAll(" ", "-")+"-webmd.html");
-				page = client.getPage("file:\\\\"+f.getAbsolutePath());
-				
-				// Get a list of the headings for each section
-				headings = page.getByXPath("//h2");
-			} 
-			catch (Exception ex) {
-				System.out.println("Unable to load local copy");
-				ex.printStackTrace();
-				return false;
-			}
+			System.out.println("Something went wrong trying to parse the WebMD webpage for "+disease+".");
+			return false;
 		}
 		
 		int numSections = headings.size();
