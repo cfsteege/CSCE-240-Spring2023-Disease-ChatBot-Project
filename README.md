@@ -23,6 +23,10 @@ Interface to represent a chatbot. The bot must provide a method to able to take 
 Takes an implementation of the ChatBot interface and creates a simple, customizable GUI for the user to enter input and see the ChatBot responses. (Project 3)
 ##### SpellingCorrector.java
 Provides a simple API for using Jazzy to correct text based on the provided dictionary file. (Project 4)
+##### DiseaseChatbotLauncher.java
+Launches GUI and prints chat session statistics and text to files in log. (Project 5)
+##### SessionLogger.java
+Summarizes recorded chat session statistics and text from the log folder. (Project 5)
 ### data
 Contains the text files generated for each disease from DiseaseWebScraper and read by DiseaseDataProcessor. 
 ### doc
@@ -33,5 +37,7 @@ Contains HTML files for CDC and WebMD pages for DiseaseWebScraper to use in the 
 Contains a text file of keywords to use for spell correcting by SpellingCorrector
 ### lib
 Contains external libraries used in project.
+### log
+Cntains a csv file with chat session statistics and a sub folder with recorded chat session text files.
 ### test 
 Contains an image of the GUI with an example chat session, an example text file "chat-session-example.txt" printed from a session with most of the possible questions and generated responses,  and the "chat-session" text file which is printed from the most recently run session.
