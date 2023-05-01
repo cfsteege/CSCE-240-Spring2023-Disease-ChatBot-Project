@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 
 /**
  * This class launches the disease chatbot and is able to log the sessions and their statistics if that option is selected.
@@ -19,6 +20,9 @@ public class DiseaseChatbotLauncher {
 	private ChatBotGui diseaseChatGui;
 	/** Disease Chatbot */
 	private DiseaseChatBot diseaseChatBot;
+	// String path of log folder
+	private String logLocation;
+
 	
 	/**
 	 * Constructor
@@ -28,11 +32,14 @@ public class DiseaseChatbotLauncher {
 		Image sendImage = new ImageIcon(ChatBotGui.class.getResource("/SendImage.png")).getImage(); 
 		Image frameImage = new ImageIcon(ChatBotGui.class.getResource("/VirusIcon.png")).getImage();
 		diseaseChatBot = new DiseaseChatBot();
+		logLocation = diseaseChatBot.getLogLocation();
 		diseaseChatGui = new ChatBotGui(diseaseChatBot, Color.decode("#02ACC9"), Color.decode("#00859B"), "Disease Chatbot", frameImage, sendImage);
 		
 		if (logSession) {
+			int numOutputFiles = 0;
+			if (new File(logLocation+"/chat_sessions/").listFiles() != null) 
+				numOutputFiles = new File(logLocation+"/chat_sessions/").listFiles().length;
 			// Get the number of chat session files and check if it has reached 50
-			int numOutputFiles = new File("log/chat_sessions/").listFiles().length;
 			if (numOutputFiles > 49) {
 				System.out.println("Chat session log is full. There are currently 50 stored chat sessions.");
 			}
@@ -59,11 +66,11 @@ public class DiseaseChatbotLauncher {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 		String dateString = dateFormat.format(date);
 		// Print the session text
-		printChatSessionToFile(diseaseChatGui.getChatSessionText(), "log/chat_sessions/"+dateString+".txt");
+		printChatSessionToFile(diseaseChatGui.getChatSessionText(), logLocation+"/chat_sessions/"+dateString+".txt");
 		// Print the session stats
-		printChatSessionStatsToFile(diseaseChatGui.getTotalChatSessionTime(), diseaseChatGui.getTotalUserUtternaces(), diseaseChatGui.getTotalSystemUtternaces(), dateString, "log/chat_statistics.csv");
+		printChatSessionStatsToFile(diseaseChatGui.getTotalChatSessionTime(), diseaseChatGui.getTotalUserUtternaces(), diseaseChatGui.getTotalSystemUtternaces(), dateString, logLocation+"/chat_statistics.csv");
 	}
-	
+ 
 	/**
 	 * Prints the chat session text to a the provided text file.
 	 * @param sessionText String with session text
@@ -127,7 +134,7 @@ public class DiseaseChatbotLauncher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new DiseaseChatbotLauncher(false);
+		new DiseaseChatbotLauncher(true);
 	}
 
 }

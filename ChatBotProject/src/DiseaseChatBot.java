@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,8 +22,11 @@ public class DiseaseChatBot implements ChatBot {
 	
 	// SpellingCorrector to try to correct user entry spelling errors
 	private SpellingCorrector spellingCorrector;
-	
+	// SessionLogger
 	private SessionLogger sessionLogger;
+	// String path of log folder
+	private String logLocation;
+
 	// Random to use for randomly generating responses
 	private Random random = new Random();
 	// Local time and date for answer related questions
@@ -35,6 +39,14 @@ public class DiseaseChatBot implements ChatBot {
 	 * Constructor
 	 */
 	public DiseaseChatBot() {
+		// Get file path on user's system for the log folder
+		logLocation = System.getProperty("user.dir").replace("\\","/")+"/log";
+		File dir = new File(logLocation);
+		// Make the log folders if they don't already exist
+		if (!dir.exists()){
+			dir.mkdirs();
+			(new File(logLocation+"/chat_sessions")).mkdirs();
+		}
 		// Create an instance of the DiseaseWebScrapper and parse all diseases
 		webScraper = new DiseaseWebScraper();
 		// Create instance if the disease data processor
@@ -42,7 +54,7 @@ public class DiseaseChatBot implements ChatBot {
 		
 		// Try to initialize the SessionLogger
 		try {
-			sessionLogger = new SessionLogger();
+			sessionLogger = new SessionLogger(logLocation);
 		} catch (FileNotFoundException e1) {
 			System.out.println("Error loading session stats files.");
 		}
@@ -71,6 +83,10 @@ public class DiseaseChatBot implements ChatBot {
 		}
 		sb.replace(sb.length() - 2, sb.length(), "");
 		diseasesResponse = sb.toString();
+	}
+	
+	public String getLogLocation() {
+		return logLocation;
 	}
 	
 	@Override
@@ -134,6 +150,7 @@ public class DiseaseChatBot implements ChatBot {
 		if (Pattern.compile("(.*)(\\b)(stat)|(history)(.*)").matcher(userInput).find() || (userInput.contains("usage") && userInput.contains("summary"))){
 			if (sessionLogger != null)
 				return sessionLogger.getSummary();
+			return "Sorry, I wasn't able to find any information for previous sessions.";
 		}
 		return null;
 	}

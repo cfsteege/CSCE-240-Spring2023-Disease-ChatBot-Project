@@ -1,4 +1,0 @@
-You: hi
-Bot: Hello
-You: how are you
-Bot: Good, thanks for asking!

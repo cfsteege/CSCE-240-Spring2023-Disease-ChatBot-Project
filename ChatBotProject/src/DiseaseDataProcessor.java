@@ -191,6 +191,7 @@ public class DiseaseDataProcessor {
 			}
 			return answerSB.toString().trim();
 		} else {
+			StringBuilder answerSB = new StringBuilder();
 	    	// Check all the regex patterns
 			for (Pattern pattern : regexPatterns) {
 	    		// Check if the pattern matches the prompt
@@ -203,21 +204,25 @@ public class DiseaseDataProcessor {
 					// Try to get the CDC and WebMD info from the matched pattern
 					String CDCInfo = CDCSectionInfo.get(pattern);
 					String WebMDInfo = WebMDSectionInfo.get(pattern);
+					// Add a line if there's already info stored
+					if (answerSB.length() != 0 && (CDCInfo != null || WebMDInfo != null))
+						answerSB.append("\n");
 					if (CDCInfo != null && WebMDInfo != null) {
 						// Both pages have the info, find the section with the most information and print it after removing the header
 						if (WebMDInfo.length() > CDCInfo.length()) {
-							return WebMDInfo.substring(WebMDInfo.indexOf('\n')+1);
+							answerSB.append(WebMDInfo.substring(WebMDInfo.indexOf('\n')+1));
 						} else {
-							return CDCInfo.substring(CDCInfo.indexOf('\n')+1);
+							answerSB.append(CDCInfo.substring(CDCInfo.indexOf('\n')+1));
 						}
 					} else if (CDCInfo != null) {
-						return CDCInfo.substring(CDCInfo.indexOf('\n')+1);
+						answerSB.append(CDCInfo.substring(CDCInfo.indexOf('\n')+1));
 					} else if (WebMDInfo != null) {
-						return WebMDInfo.substring(WebMDInfo.indexOf('\n')+1);
+						answerSB.append(WebMDInfo.substring(WebMDInfo.indexOf('\n')+1));
 					}
 				}
 			}
-			
+			if (answerSB.length() != 0)
+				return answerSB.toString();
 			// Format a String a list of all the info we found for this disease
 			StringBuilder sb = new StringBuilder();
 			for (String section : foundInfoSections)

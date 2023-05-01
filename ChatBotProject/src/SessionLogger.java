@@ -10,14 +10,18 @@ import java.util.Scanner;
 public class SessionLogger {
 	/** List of lines from the csv statistics file */
 	private ArrayList<String[]> lines = new ArrayList<>();
+	/** String path of log folder */
+	private String logLocation;
 	
 	/**
 	 * Constructor
+	 * @param logLocation String file location for log folder
 	 * @throws FileNotFoundException 
 	 */
-	public SessionLogger() throws FileNotFoundException {
+	public SessionLogger(String logLocation) throws FileNotFoundException {
+		this.logLocation = logLocation;
 		// Read the statistics file and store all the lines
-		Scanner scanner = new Scanner(new File("log/chat_statistics.csv"));
+		Scanner scanner = new Scanner(new File(logLocation+"/chat_statistics.csv"));
         while (scanner.hasNext())
         	lines.add(scanner.next().split(",")); 
 	}
@@ -83,7 +87,7 @@ public class SessionLogger {
 		try {
 			StringBuilder sb = new StringBuilder();
 			// Read the corresponding session file for the session with the same date
-			scanner = new Scanner(new File("log/chat_sessions/"+line[4]+".txt"));
+			scanner = new Scanner(new File(logLocation+"/chat_sessions/"+line[4]+".txt"));
 			// Print each line from that text file
 	        while (scanner.hasNextLine()) 
 	        	sb.append(scanner.nextLine());
@@ -101,7 +105,7 @@ public class SessionLogger {
 	public static void main(String[] args) {
 		SessionLogger sessionLogger;
 		try {
-			sessionLogger = new SessionLogger();
+			sessionLogger = new SessionLogger("log");
 			// Make sure a command was provided.
 			if (args.length == 0) {
 				System.out.println("ERROR: No command line argumement provided.");
