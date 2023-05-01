@@ -37,7 +37,5 @@ Contains HTML files for CDC and WebMD pages for DiseaseWebScraper to use in the 
 Contains a text file of keywords to use for spell correcting by SpellingCorrector
 ### lib
 Contains external libraries used in project.
-### log
-Cntains a csv file with chat session statistics and a sub folder with recorded chat session text files.
 ### test 
 Contains an image of the GUI with an example chat session, an example text file "chat-session-example.txt" printed from a session with most of the possible questions and generated responses,  and the "chat-session" text file which is printed from the most recently run session.
